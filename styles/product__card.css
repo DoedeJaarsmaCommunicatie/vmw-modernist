@@ -27,6 +27,7 @@
 .product__horizontal__card {
   display: grid;
   grid-template-areas: "img main aside";
+  grid-template-columns: 20% 50% 30%;
 }
 @media screen and (max-width: 414px) {
   .product__horizontal__card {
@@ -77,6 +78,9 @@
   border: 0;
   border-bottom: 1px solid #a7a7a7;
   border-top: 1px solid #a7a7a7;
+}
+.product__horizontal__add_to_cart input[type=numeric] {
+  width: 50px;
 }
 
 .vmw__recently__visited__container {

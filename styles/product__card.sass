@@ -27,6 +27,7 @@
 .product__horizontal__card
   display: grid
   grid-template-areas: "img main aside"
+  grid-template-columns: 20% 50% 30%
 
   @media screen and (max-width: 414px)
     grid-template-areas: "img aside" "main aside"
@@ -64,6 +65,9 @@
     border: 0
     border-bottom: 1px solid #a7a7a7
     border-top: 1px solid #a7a7a7
+
+  input[type="numeric"]
+    width: 50px
 
 .vmw__recently__visited__container
   display: grid

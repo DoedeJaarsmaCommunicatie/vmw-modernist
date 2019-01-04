@@ -24,6 +24,7 @@ array_map(
 		'helpers/header',
 		'helpers/elementor',
 		'helpers/wc_ajax',
+		'helpers/class-vmw-kiyoh-fetcher',
 
 		'filters/products',
 		
@@ -53,6 +54,7 @@ add_action( 'upload_mimes', 'add_file_types_to_uploads' );
  */
 function vmw_scripts() {
 	wp_enqueue_style( 'badubed-style', get_stylesheet_uri(), [], 201811, 'all' );
+	wp_enqueue_style( 'vmw_general_styles', get_stylesheet_directory_uri() . '/styles/general.css', [], 201901, 'all' );
 	wp_enqueue_style( 'vmw_products', get_stylesheet_directory_uri() . '/styles/product__card.css', [], 201811, 'all' );
 	wp_enqueue_style( 'vmw_product', get_stylesheet_directory_uri() . '/styles/single__product.css', [], 201812, 'all' );
 	wp_enqueue_style( 'vmw_shopping__cart', get_stylesheet_directory_uri() . '/styles/shopping__cart.css', [], 201812, 'all' );
