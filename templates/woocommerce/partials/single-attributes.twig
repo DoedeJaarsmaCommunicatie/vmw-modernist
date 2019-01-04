@@ -1,0 +1,28 @@
+{% do action('vmw_before_single_attributes') %}
+
+<table>
+    <tr>
+        <th>Land</th>
+        <td>
+            {{ product.get_attribute( 'pa_land' ) }}
+        </td>
+    </tr>
+    <tr>
+        <th>Druif</th>
+        <td>
+            {{ product.get_attribute( 'pa_druif' ) }}
+        </td>
+    </tr>
+    <tr>
+        <th>Jaargang</th>
+        <td>
+            {{ product.get_attribute( 'pa_jaar' ) }}
+        </td>
+    </tr>
+    <tr>
+        <th>Smaak</th>
+        <td>
+            {{ product.get_attribute( 'pa_smaak' ) }}
+        </td>
+    </tr>
+</table>

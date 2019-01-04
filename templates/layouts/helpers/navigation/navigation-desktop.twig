@@ -1,0 +1,32 @@
+<section class="bg-tertiary-light-50 d-none d-lg-block">
+    <div class="container">
+        <nav class="vwm__navigation__container d-flex position-relative">
+            {% for item in menu.items %}
+                <section class="d-flex {% if(loop.first) %} mr-2 {% elseif(loop.last)  %} ml-auto {% else %} mx-2 {% endif %}"
+                        {% if(item.children) %}
+                            data-hover-target="hover_{{ item.id }}"
+                        {% endif %}
+                >
+                    <a
+                            class="vmw__navigation__parent color-tertiary-dark-20 my-2 text-lowercase{{ item.classes|join(' ') }}"
+                            href="{{ item.link }}"
+                    >
+                        {{ item.title }}
+                    </a>
+                    {% if(item.children) %}
+                        <section class="vmw__mega__menu container-fluid position-absolute d-none p-3 bg-white" data-hover-anchor="hover_{{ item.id }}">
+                            {% for child in item.children %}
+                                <nav class="d-flex flex-column {% if(loop.first) %} mr-auto {% elseif(loop.last)  %} ml-auto {% else %} mx-auto {% endif %}">
+                                    {{ child }}
+                                    {% for baby in child.children %}
+                                        <a href="{{ baby.link }}">{{ baby }}</a>
+                                    {% endfor %}
+                                </nav>
+                            {% endfor %}
+                        </section>
+                    {% endif %}
+                </section>
+            {% endfor %}
+        </nav>
+    </div>
+</section>

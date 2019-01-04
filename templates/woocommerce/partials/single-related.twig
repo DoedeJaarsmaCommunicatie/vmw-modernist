@@ -1,0 +1,55 @@
+{#{{ dump(current) }}#}
+{% set cur_prod = fn('wc_get_product', current.ID) %}
+<article class="col-lg-3 col-md-6 mb-lg-0 mb-3">
+    <div class="card mb-5 mb-lg-0 h-100 vmw__related__card__container">
+        <div class="card-body d-flex flex-column">
+            <figure class="text-center">
+                <a href="{{ fn('get_permalink', current.ID) }}">
+                    <img src="{{ current.thumbnail.src('medium') }}" alt="{{ current.title }}" class="vmw__related__image">
+                </a>
+            </figure>
+            <div class="card-title text-primary text-center text-uppercase">
+                <h5 class="vmw__related__card_title pt-1">
+                    <a href="{{ fn('get_permalink', current.ID) }}">
+                        {{ current.title }}
+                    </a>
+                </h5>
+                <h5>
+                    &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
+                </h5>
+            </div>
+            <div class="card-content">
+                <hr>
+                <ul class="vmw__related__products__list">
+                    <li>
+                        <i class="fas fa-globe-europe"></i> {{ cur_prod.get_attribute('pa_land') }}
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marked-alt"></i> {{ cur_prod.get_attribute('pa_streek') }}
+                    </li>
+                    <li>
+                        <i class="fas fa-wine-glass-alt"></i> {{ cur_prod.get_attribute('pa_smaak') }}
+                    </li>
+                    <li>
+                        <i class="fas fa-tint"></i> {{ cur_prod.get_attribute('pa_druif') }}
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer-vmw text-center mt-auto">
+                <hr>
+                {#{% if ( fn('get_queried_object_id') === current.ID ) %}#}
+                    {#Deze heb je nu#}
+                {#{% endif %}#}
+                {% if current.ID == fn('get_queried_object_id') %}
+                    <span class="bg-tertiary p-1 d-inline-block text-white">
+                        {{ __('Selecteer', 'vmw') }}
+                    </span>
+                {% else %}
+                <a href="{{ fn('get_permalink', current.ID) }}" class="vmw__gradient__background__right p-1 d-inline-block text-white">
+                    {{ __('Selecteer', 'vmw') }}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</article>

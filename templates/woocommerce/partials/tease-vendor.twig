@@ -1,0 +1,14 @@
+<article class="vmw__single__product__vendor__container border border-tertiary-light-50 p-1 mb-2">
+    <figure class="vmw__single__product__vendor__figure">
+        <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+    </figure>
+    <section class="vmw__single__product__vendor__content">
+        <h3><a href="{{ fn('get_term_link', vendor.term_id) }}">{{ vendor.name }}</a></h3>
+        <p class="vmw__single__product__vendor__text">
+            {{ vendor_data.profile|excerpt(25) }}
+        </p>
+        <a class="vmw__gradient__background__left p-2 d-inline-block text-white" href="{{ fn('get_term_link', vendor.term_id) }}" title="Bekijk meer wijnen van {{ vendor.name }}">
+            Bekijk het assortiment
+        </a>
+    </section>
+</article>

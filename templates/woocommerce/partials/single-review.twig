@@ -1,0 +1,26 @@
+{#{{ dump(comment) }}#}
+<article>
+    {#<figure>#}
+        {#{{ fn('get_avatar', comment, 60, '//via.placeholder.com/60x60', comment.comment_author ~ " over " ~ post.title ) }}#}
+    {#</figure>#}
+    <section>
+        <header>
+            <strong>
+                {{ comment.comment_author }}
+            </strong>
+            <small>
+                {% if comment.verified %}
+                    <em>
+                        ({{ __('Geverifieerde eigenaar', 'vmw') }})
+                    </em>
+                {% endif %}
+                - {{ comment.comment_date|date('d F Y') }}
+            </small>
+
+            {{ fn('the_fa_rating', comment.rating) }}
+        </header>
+        <main>
+            {{ comment.comment_content }}
+        </main>
+    </section>
+</article>

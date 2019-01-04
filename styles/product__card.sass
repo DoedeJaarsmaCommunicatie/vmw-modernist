@@ -1,0 +1,73 @@
+@import "functions"
+.product__card
+  display:  flex
+  flex-direction:  column
+  flex-basis: auto
+  flex-grow: 1
+  flex-shrink: 1
+  align-items: center
+  justify-content: center
+  position: relative
+
+  .product__card__image
+    height: 175px
+
+  .product__card__price
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 75px
+    height: 75px
+    border-radius: 50%
+    bottom: 0
+    left: 0
+    transform: matrix(1, 0, 0, 1, 90, 0)
+
+.product__horizontal__card
+  display: grid
+  grid-template-areas: "img main aside"
+
+  @media screen and (max-width: 414px)
+    grid-template-areas: "img aside" "main aside"
+
+  +hover_shadow
+
+  .product__horizontal__image
+    grid-area: img
+    height: 250px
+    object-fit: cover
+
+  .product__horizontal__content
+    grid-area: main
+
+  .product__horizontal__buy
+    grid-area: aside
+    font-size: 2rem
+    @media screen and (max-width: 414px)
+      .product__horizontal__add_to_cart
+        flex-wrap: wrap
+        #quantity
+          width: 32px
+
+.product__horizontal__add_to_cart
+  display: flex
+  height: 45px
+
+  .btn-plusle-minum
+    +border_radius
+
+  .btn-order
+    +border_radius
+
+  input
+    border: 0
+    border-bottom: 1px solid #a7a7a7
+    border-top: 1px solid #a7a7a7
+
+.vmw__recently__visited__container
+  display: grid
+  grid-template-columns: 30% auto
+
+.vmw__product__attributes
+  +normalize_list

@@ -1,0 +1,17 @@
+<article class="vmw__recently__visited__container border border-tertiary-light-50 p-1">
+    <figure class="vmw__recently__visited__figure">
+        <a href="{{ fn('get_permalink', recent.ID) }}">
+            <img src="{{ fn('get_the_post_thumbnail_url', recent.ID, 'medium') }}" alt="{{ recent.title }}" class="vmw__recently__visited__image">
+        </a>
+    </figure>
+    <section class="vmw__recently__visited__content">
+        <h3>
+            <a href="{{ fn('get_permalink', recent.ID) }}">
+                {{ recent.title }}
+            </a>
+        </h3>
+        <p class="vmw__recently__visited__text">
+            {{ recent.content|excerpt(25) }}
+        </p>
+    </section>
+</article>

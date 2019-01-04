@@ -1,0 +1,45 @@
+<section class="bg-tertiary-light-50 d-none d-lg-none" id="mobile-menu">
+    {% for item in menu.items %}
+        <section class="d-flex flex-column">
+            <section class="w-100 d-flex align-items-center border-bottom border-tertiary-dark-5 px-3">
+                <a class="vmw__navigation__parent color-tertiary-dark-20 my-2 w-100 text-lowercase{{ item.classes|join(' ') }}"
+                   href="{{ item.link }}" >
+                    {{ item.title }}
+                </a>
+                {% if item.children %}
+                    <button class="btn bg-transparent" data-submenu-target="#sub_{{ item.id }}">
+                        <i class="fas fa-chevron-down ml-auto"></i>
+                    </button>
+                {% endif %}
+            </section>
+            {% if(item.children) %}
+                <section class="d-none" id="sub_{{ item.id }}">
+                    {% for child in item.children %}
+                        <nav class="d-flex flex-column">
+                            <section class="d-flex border-bottom border-tertiary-dark-5 py-2 px-3">
+                                <span class="w-100">{{ child }}</span>
+                                <button class="btn bg-transparent" data-mega-submenu-target="#mega_sub_{{ child.id }}">
+                                    <i class="fas fa-chevron-down ml-auto"></i>
+                                </button>
+                            </section>
+                            {% if child.children %}
+                                <section class="d-none flex-column border-bottom border-tertiary-dark-5 py-2 pl-3 pr-4" id="mega_sub_{{ child.id }}">
+                                    {% for baby in child.children %}
+                                        <a href="{{ baby.link }}" class="d-flex">
+                                            {{ baby }}
+                                            <i class="fas fa-chevron-right ml-auto"></i>
+                                        </a>
+                                    {% endfor %}
+                                </section>
+                            {% endif %}
+                        </nav>
+                    {% endfor %}
+                </section>
+            {% endif %}
+        </section>
+    {% endfor %}
+</section>
+
+<section class="bg-tertiary-light-50 d-block d-lg-none px-3 py-1">
+    {{ fn('the_search_form') }}
+</section>
