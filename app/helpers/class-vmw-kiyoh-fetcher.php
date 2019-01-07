@@ -13,7 +13,7 @@ class VmwKiyohFetcher
 	
 	public function fetch()
 	{
-		if( ! get_transient('vmw_kiyoh_score') )
+		if( ! get_transient('vmw_kiyoh_fetch') )
 		{
 			$this->kiyoh = new \JKetelaar\Kiyoh\Kiyoh( 'eXenetp25gPxyHYQAmg4f9ByeKS4UW2pMEYqsrQ8AVMfZVMpWg', 22643);
 			
@@ -21,14 +21,15 @@ class VmwKiyohFetcher
 			
 			if( $vmw )
 			{
-				\set_transient('vmw_kiyoh_score', $vmw->getTotalScore(), 86400 );
-				\set_transient('vmw_kiyoh_reviews', $vmw->getTotalReviews(), 86400 );
+				\update_option('vmw_kiyoh_score', $vmw->getTotalScore(), 86400 );
+				\update_option('vmw_kiyoh_reviews', $vmw->getTotalReviews(), 86400 );
+				\set_transient( 'vmw_kiyoh_fetch', true);
 			}
 		}
 		
 		wp_send_json_success([
-			'total_score' => get_transient('vmw_kiyoh_score'),
-			'total_reviews' => get_transient('vmw_kiyoh_reviews'),
+			'total_score' => \get_option('vmw_kiyoh_score'),
+			'total_reviews' => \get_option('vmw_kiyoh_reviews'),
 		]);
 	}
 }
