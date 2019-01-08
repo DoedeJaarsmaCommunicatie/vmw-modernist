@@ -81,11 +81,11 @@ function the_big_shopping_cart()
 	
 	?>
     <section class="shopping__cart__container js-target-shopping-cart p-3 border border-tertiary-light-50">
-        <header class="vmw__shopping__cart__header js-shopping-cart-close">
+        <header class="vmw__shopping__cart__header js-shopping-cart-close d-flex w-100">
             <h3>
                 Winkelmandje &euro; <?=$cart_totals['total']?>
             </h3>
-            <span>
+            <span class="ml-auto" style="cursor: pointer;">
                 <i class="fas fa-times fa-2x"></i>
             </span>
         </header>
