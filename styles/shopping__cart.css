@@ -16,9 +16,6 @@
   overflow-y: scroll;
   z-index: 9998;
 }
-.shopping__cart__container.is-peeking {
-  right: -25%;
-}
 .shopping__cart__container.is-active {
   right: 0;
 }
@@ -29,6 +26,10 @@
 }
 .shopping__cart__container.is-active.is-full {
   width: 100vw;
+}
+
+.vmw__shopping__cart__header {
+  padding-top: 0.75rem;
 }
 
 .vmw__shopping__cart__item {

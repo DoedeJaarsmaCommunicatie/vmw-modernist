@@ -31,6 +31,7 @@ class VmwKiyohFetcher
 		wp_send_json_success([
 			'total_score' => \get_option('vmw_kiyoh_score'),
 			'total_reviews' => \get_option('vmw_kiyoh_reviews'),
+			'kiyoh_url' => \get_option('vmw_kiyoh_url'),
 		]);
 	}
 }

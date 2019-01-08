@@ -3,18 +3,19 @@
 {% block content %}
 
     {% do action('woocommerce_before_single_product') %}
-    <meta itemprop="url" content="{{ post.link }}" />
-
     <article itemscope itemtype="http://schema.org/Product" class="single-product-details vmw__single__product container {{ post.class }}">
+        <meta itemprop="url" content="{{ post.link }}" />
+        <meta itemprop="category" content="{{ product.category }}">
+        <meta itemprop="sku" content="{{ product.SKU }}">
         <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-            <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}">
+            <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}" itemprop="name">
                 {{ post.title }}
             </h1>
         </header>
         <aside class="vmw__single__product__aside border border-tertiary-light-50 p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
-                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }}" class="vmw__single__product__image" />
+                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }}" class="vmw__single__product__image" itemprop="image" />
             </figure>
             {% do action('vmw_after_single_product_image') %}
         </aside>
@@ -22,7 +23,9 @@
             {% do action('vmw_before_single_product_summary') %}
             <div class="summary entry-summary">
                 {#{% do action('woocommerce_single_product_summary') %}#}
-                {{ post.content }}
+                <span itemprop="description">
+                    {{ post.content }}
+                </span>
                 {% include ["templates/woocommerce/partials/single-attributes.twig"] %}
             </div>
             {% do action('vmw_after_single_product_summary') %}
@@ -66,6 +69,11 @@
             </h3>
             {{ post.ID|apply_filters('horizontal_product_card_filter') }}
         </section>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org", "@type": "Offer", "@id": "{{ post.link }}", "price": "{{ product.price }}", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"
+            }
+        </script>
     </article>
 
     {#{% include ["templates/woocommerce/partials/tease-product.twig"] with { products: related_products } %}#}

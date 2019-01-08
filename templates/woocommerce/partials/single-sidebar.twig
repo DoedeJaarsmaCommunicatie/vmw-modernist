@@ -1,6 +1,6 @@
 <aside class="vmw__single__product__order bg-tertiary-light-50 p-2">
     {% do action('vmw_before_single_product_price') %}
-    <span class="vmw__single__product__price text-primary">
+    <span class="vmw__single__product__price text-primary" itemprop="price">
         &euro; {{ product.get_price() }}
     </span>
     {{ fn('the_wc_single_stock', product.get_id()) }}
