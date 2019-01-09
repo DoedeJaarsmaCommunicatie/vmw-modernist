@@ -84,6 +84,24 @@
 .vmw__related__products__list .vmw__related__products__list__item {
   display: flex;
 }
+.vmw__related__products__list .vmw__related__products__list__land {
+  grid-area: land;
+}
+.vmw__related__products__list .vmw__related__products__list__jaar {
+  grid-area: jaar;
+}
+.vmw__related__products__list .vmw__related__products__list__streek {
+  grid-area: streek;
+}
+.vmw__related__products__list .vmw__related__products__list__druif {
+  grid-area: druif;
+}
+.vmw__related__products__list .vmw__related__products__list__smaak {
+  grid-area: smaak;
+}
+.vmw__related__products__list .vmw__related__products__list__price {
+  grid-area: prijs;
+}
 
 .vmw__related__card__container:hover {
   -webkit-box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
