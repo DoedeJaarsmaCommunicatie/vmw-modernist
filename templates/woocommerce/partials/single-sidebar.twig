@@ -3,8 +3,8 @@
     <span class="vmw__single__product__price text-right" itemprop="price">
         &euro; {{ product.get_price() }}
     </span>
-    {{ fn('the_wc_single_stock', product.get_id()) }}
     {{ product.get_id|apply_filters('product_form_add_to_cart') }}
+    {{ fn('the_wc_single_stock', product.get_id()) }}
     {{ fn('the_wc_usp') }}
     <p>
         Verkoop door:
