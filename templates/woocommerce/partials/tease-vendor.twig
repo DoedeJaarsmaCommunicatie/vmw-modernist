@@ -1,7 +1,5 @@
-<article class="vmw__single__product__vendor__container border border-tertiary-light-50 p-1 mb-2">
-    <figure class="vmw__single__product__vendor__figure">
-        <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
-    </figure>
+<article class="vmw__single__product__vendor__container p-1 mb-2">
+
     <section class="vmw__single__product__vendor__content">
         <h3><a href="{{ fn('get_term_link', vendor.term_id) }}">{{ vendor.name }}</a></h3>
         <p class="vmw__single__product__vendor__text">
@@ -11,4 +9,7 @@
             Bekijk het assortiment
         </a>
     </section>
+    <figure class="vmw__single__product__vendor__figure">
+        <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+    </figure>
 </article>
