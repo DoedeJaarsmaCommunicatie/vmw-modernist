@@ -70,9 +70,9 @@
   align-items: stretch;
 }
 .wac-quantity .wac-qty-button {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  -webkit-border-radius: 5 !important;
+  -moz-border-radius: 5 !important;
+  border-radius: 5 !important;
   padding: 0;
   display: flex;
   width: 30px;

@@ -38,7 +38,7 @@
 
 .vmw__single__product__shipping {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 10% 90%;
 }
 
 .vmw__single__product__usp {
@@ -89,9 +89,9 @@
 }
 
 .vmw__related__card__container {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  -webkit-border-radius: 5 !important;
+  -moz-border-radius: 5 !important;
+  border-radius: 5 !important;
 }
 
 .vmw__related__card_title {
@@ -104,6 +104,14 @@
 
 .vmw__single__product__price {
   font-size: 2rem;
+}
+
+.vmw__single__product__order .vmw__single__product__vendor__logo {
+  max-height: 150px;
+}
+
+.btn-order {
+  width: 100%;
 }
 
 /*# sourceMappingURL=single__product.css.map */
