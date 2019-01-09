@@ -10,7 +10,10 @@
             {{ product.get_attribute('pa_jaar') }} | {{ product.get_attribute('pa_land') }}
         </p>
         <p class="p-0 m-0">
-            {{ product.get_attribute('pa_druif') }}
+            <figure>
+                <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
+            </figure>
+                        {{ product.get_attribute('pa_druif') }}
         <p>
     </section>
     <figure class="product__card__figure">
