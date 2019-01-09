@@ -68,15 +68,19 @@
   -webkit-border-radius: 5 !important;
   -moz-border-radius: 5 !important;
   border-radius: 5 !important;
+}
+.product__horizontal__add_to_cart .btn-plusle-minum:first-of-type {
   border-bottom-right-radius: 0;
-  border-left-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.product__horizontal__add_to_cart .btn-plusle-minum:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .product__horizontal__add_to_cart .btn-order {
   -webkit-border-radius: 5 !important;
   -moz-border-radius: 5 !important;
   border-radius: 5 !important;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 .product__horizontal__add_to_cart input {
   border: 0;
