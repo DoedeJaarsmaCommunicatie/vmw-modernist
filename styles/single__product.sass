@@ -80,7 +80,16 @@
   +border_radius
 
 .vmw__related__card_title
-  min-height: 5rem
+  position: relative
+  &::after
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    height: 1px
+    background: var(--primary)
+    width: 300px
+
 
 .vmw__related__image
   max-height: 150px

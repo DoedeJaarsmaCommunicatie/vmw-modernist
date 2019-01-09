@@ -35,7 +35,7 @@
         {% include ["templates/woocommerce/partials/single-sidebar.twig"] with { product: product } %}
         <section class="vmw__single__product__related my-3 text-center">
             <h4>{{ __('Alternatieven', 'vmw' ) }}</h4>
-            <div class="row">
+            <div class="row justify-content-center">
                 {% include "templates/woocommerce/partials/single-related.twig" with { current: post } %}
                 {% for prod in related_products %}
                     {% include "templates/woocommerce/partials/single-related.twig" with { current: prod } %}

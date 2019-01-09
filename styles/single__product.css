@@ -95,7 +95,16 @@
 }
 
 .vmw__related__card_title {
-  min-height: 5rem;
+  position: relative;
+}
+.vmw__related__card_title::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: var(--primary);
+  width: 300px;
 }
 
 .vmw__related__image {
