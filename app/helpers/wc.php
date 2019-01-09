@@ -30,7 +30,7 @@ function the_wc_single_stock( $product_id ) {
 	$product = wc_get_product( $product_id );
 	if( $product->is_in_stock() ) : ?>
     <section class="vmw__single__product__shipping">
-        <i class="fas fa-check-circle text-success"></i> <span><strong class="text-success">Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
+        <i class="fas fa-check-circle text-success mt-1"></i> <span><strong class="text-success">Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
     </section>
 	<?php
 	endif;
