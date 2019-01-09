@@ -13,5 +13,10 @@ if( class_exists( 'Timber' ) ) {
 	$product                = wc_get_product( $context['post']->ID );
 	$context['product']     = $product;
 	
-	Timber::render('templates/woocommerce/partials/tease-archive.twig', $context);
+
+	if( is_home() ) {
+		Timber::render('templates/woocommerce/partials/tease-product.twig', $context);
+	} else {
+		Timber::render('templates/woocommerce/partials/tease-archive.twig', $context);
+	}
 }
