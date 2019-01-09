@@ -71,7 +71,7 @@
 }
 .product__horizontal__add_to_cart .btn-plusle-minum:first-of-type {
   border-bottom-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 .product__horizontal__add_to_cart .btn-plusle-minum:last-of-type {
   border-top-left-radius: 0;
