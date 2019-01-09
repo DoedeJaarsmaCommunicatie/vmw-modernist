@@ -141,6 +141,19 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       default: 'https://vindmijnwijn.nl/vmw_new_staging/winkel/'
     }
+  },
+  methods: {
+    submitData: function submitData() {
+      var land = document.querySelector('#product-land').value;
+      var prijs = document.querySelector('#product-price').value;
+      var category = document.querySelector('#product-category').value;
+      var params = new URLSearchParams();
+      params.append('product-category', category);
+      params.append('product-land', land);
+      params.append('product-price', prijs);
+      var pUrl = "".concat(this.url, "?").concat(params.toString());
+      window.location.href = pUrl;
+    }
   }
 });
 
@@ -1274,7 +1287,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "vmw__special__search bg-primary has-border-radius" },
+    [
+      _c(
+        "form",
+        {
+          staticClass: "text-center text-white d-flex flex-column p-3",
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.submitData($event)
+            }
+          }
+        },
+        [
+          _c("p", [_vm._v("\n            Ik ben op zoek naar:\n        ")]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn bg-white text-dark has-border-radius",
+              attrs: { type: "submit" }
+            },
+            [_vm._v("Vind mijn wijn")]
+          )
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -1282,85 +1330,108 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "div",
-      { staticClass: "vmw__special__search bg-primary has-border-radius" },
+      "span",
+      {
+        staticClass:
+          "bg-primary-dark-10 has-border-radius my-1 d-flex justify-content-center px-3"
+      },
       [
         _c(
-          "form",
-          { staticClass: "text-center text-white d-flex flex-column p-3" },
+          "label",
+          { staticClass: "p-0 m-0 w-25", attrs: { for: "product-category" } },
+          [_vm._v("een")]
+        ),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "bg-transparent w-100",
+            attrs: { id: "product-category", name: "product-category" }
+          },
           [
-            _c("p", [_vm._v("\n            Ik ben op zoek naar:\n        ")]),
-            _vm._v(" "),
-            _c("span", [
-              _c("label", { attrs: { for: "product-cat" } }, [_vm._v("een")]),
-              _vm._v(" "),
-              _c(
-                "select",
-                { attrs: { id: "product-cat", name: "product-cat" } },
-                [
-                  _c("option", { attrs: { value: "rode-wijn" } }, [
-                    _vm._v("Rode wijn")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "witte-wijn" } }, [
-                    _vm._v("Witte wijn")
-                  ])
-                ]
-              )
+            _c("option", { attrs: { value: "rode-wijn" } }, [
+              _vm._v("Rode wijn")
             ]),
             _vm._v(" "),
-            _c("span", [
-              _c("label", { attrs: { for: "product-land" } }, [_vm._v("uit")]),
-              _vm._v(" "),
-              _c(
-                "select",
-                { attrs: { id: "product-land", name: "product-land" } },
-                [
-                  _c("option", { attrs: { value: "frankrijk" } }, [
-                    _vm._v("Frankrijk")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "duitsland" } }, [
-                    _vm._v("Duitsland")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "italie" } }, [
-                    _vm._v("Italie")
-                  ])
-                ]
-              )
+            _c("option", { attrs: { value: "witte-wijn" } }, [
+              _vm._v("Witte wijn")
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass:
+          "bg-primary-dark-10 has-border-radius my-1 d-flex justify-content-center px-3"
+      },
+      [
+        _c(
+          "label",
+          { staticClass: "p-0 m-0 w-25", attrs: { for: "product-land" } },
+          [_vm._v("uit")]
+        ),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "bg-transparent w-100",
+            attrs: { id: "product-land", name: "product-land" }
+          },
+          [
+            _c("option", { attrs: { value: "frankrijk" } }, [
+              _vm._v("Frankrijk")
             ]),
             _vm._v(" "),
-            _c("span", [
-              _c("label", { attrs: { for: "product-land" } }, [
-                _vm._v("voor €")
-              ]),
-              _vm._v(" "),
-              _c(
-                "select",
-                { attrs: { id: "product-land", name: "product-land" } },
-                [
-                  _c("option", { attrs: { value: "5" } }, [_vm._v("< 5")]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "5-10" } }, [_vm._v("5-10")]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "15-25" } }, [
-                    _vm._v("15-25")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "25" } }, [_vm._v("25+")])
-                ]
-              )
+            _c("option", { attrs: { value: "duitsland" } }, [
+              _vm._v("Duitsland")
             ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn bg-white text-dark has-border-radius",
-                attrs: { type: "button" }
-              },
-              [_vm._v("Vind mijn wijn")]
-            )
+            _c("option", { attrs: { value: "italie" } }, [_vm._v("Italie")])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      {
+        staticClass:
+          "bg-primary-dark-10 has-border-radius my-1 d-flex justify-content-center px-3"
+      },
+      [
+        _c(
+          "label",
+          { staticClass: "p-0 m-0 w-25", attrs: { for: "product-price" } },
+          [_vm._v("voor")]
+        ),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "bg-transparent w-100",
+            attrs: { id: "product-price", name: "product-price" }
+          },
+          [
+            _c("option", { attrs: { value: "5-5" } }, [_vm._v("< €5")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "5-10" } }, [_vm._v("€5 tot €10")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "15-25" } }, [
+              _vm._v("€15 tot €25")
+            ]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "25" } }, [_vm._v("€25+")])
           ]
         )
       ]
