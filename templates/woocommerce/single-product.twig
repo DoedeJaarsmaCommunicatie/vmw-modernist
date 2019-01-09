@@ -33,8 +33,8 @@
         </main>
         {# This includes the right sidebar #}
         {% include ["templates/woocommerce/partials/single-sidebar.twig"] with { product: product } %}
-        <section class="vmw__single__product__related my-3 text-center">
-            <h4>{{ __('Alternatieven', 'vmw' ) }}</h4>
+        <section class="vmw__single__product__related text-center">
+            <h4 class="my-5">{{ __('Alternatieven', 'vmw' ) }}</h4>
             <div class="row justify-content-center">
                 {% include "templates/woocommerce/partials/single-related.twig" with { current: post } %}
                 {% for prod in related_products %}
@@ -42,10 +42,11 @@
                 {% endfor %}
             </div>
         </section>
-        <section class="vmw__single__product__cards">
+        <section class="vmw__single__product__cards my-5">
             <!-- Current vendor -->
             {% include ["templates/woocommerce/partials/tease-vendor.twig"] %}
         </section>
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org", "@type": "Offer", "@id": "{{ post.link }}", "price": "{{ product.price }}", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"
