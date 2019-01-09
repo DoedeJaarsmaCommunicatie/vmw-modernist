@@ -7,12 +7,8 @@
         <meta itemprop="url" content="{{ post.link }}" />
         <meta itemprop="category" content="{{ product.category }}">
         <meta itemprop="sku" content="{{ product.SKU }}">
-        <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-            <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}" itemprop="name">
-                {{ post.title }}
-            </h1>
-        </header>
-        <aside class="vmw__single__product__aside border border-tertiary-light-50 p-3">
+
+        <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
                 <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }}" class="vmw__single__product__image" itemprop="image" />
@@ -20,9 +16,14 @@
             {% do action('vmw_after_single_product_image') %}
         </aside>
         <main class="vmw__single__product__main">
+            <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
+                <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}" itemprop="name">
+                    {{ post.title }}
+                </h1>
+                <p>{{ __('Verkoop door:', 'vmw') }} <span class="text-primary">{{ vendor.name }}</span></p>
+            </header>
             {% do action('vmw_before_single_product_summary') %}
             <div class="summary entry-summary">
-                {#{% do action('woocommerce_single_product_summary') %}#}
                 <span itemprop="description">
                     {{ post.content }}
                 </span>
@@ -32,8 +33,8 @@
         </main>
         {# This includes the right sidebar #}
         {% include ["templates/woocommerce/partials/single-sidebar.twig"] with { product: product } %}
-        <section class="vmw__single__product__related my-3">
-            <h4>Alternatieven</h4>
+        <section class="vmw__single__product__related my-3 text-center">
+            <h4>{{ __('Alternatieven', 'vmw' ) }}</h4>
             <div class="row">
                 {% include "templates/woocommerce/partials/single-related.twig" with { current: post } %}
                 {% for prod in related_products %}
@@ -41,33 +42,9 @@
                 {% endfor %}
             </div>
         </section>
-        <section class="vmw__single__product__reviews">
-            <h4>{{ post.get_comment_count() }} Review(s)</h4>
-            {% if (post.get_comment_count() > 0) %}
-                {% for cmt in comments %}
-                    {% include "templates/woocommerce/partials/single-review.twig" with { comment:cmt } %}
-                {% endfor %}
-            {% elseif fn('is_verified_buyer') %}
-                {# Include templates/woocommerce/review/review-form.twig #}
-            {% endif %}
-        </section>
         <section class="vmw__single__product__cards">
             <!-- Current vendor -->
-            <h3>
-                De wijnwinkel
-            </h3>
             {% include ["templates/woocommerce/partials/tease-vendor.twig"] %}
-            <!-- Recently visited -->
-            <h3>
-                Recent bezocht
-            </h3>
-            {% include ["templates/woocommerce/partials/tease-product.twig"] %}
-        </section>
-        <section class="vmw__single__product__foundit my-2">
-            <h3>
-                Ik heb 'm gevonden
-            </h3>
-            {{ post.ID|apply_filters('horizontal_product_card_filter') }}
         </section>
         <script type="application/ld+json">
             {
@@ -75,9 +52,6 @@
             }
         </script>
     </article>
-
-    {#{% include ["templates/woocommerce/partials/tease-product.twig"] with { products: related_products } %}#}
-
     {% do action('woocommerce_after_single_product') %}
 
 {% endblock  %}
