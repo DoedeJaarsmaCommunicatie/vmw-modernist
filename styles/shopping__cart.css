@@ -81,7 +81,7 @@
 }
 
 .wac-quantity .wac-qty-button {
-  border-radius: 5px !important;
+  border-radius: 0;
   padding: 0;
   display: flex;
   width: 30px;
