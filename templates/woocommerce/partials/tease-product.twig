@@ -1,10 +1,10 @@
 {# post en product zijn beschikbaar #}
-<article class="vmw__recently__visited__container p-1 text-center">
-    <h3 class="product__card__title">
-        <a href="{{ fn('get_permalink', post.ID) }}">
+<article class="vmw__recently__visited__container p-1 text-center d-flex flex-column">
+    <h5 class="product__card__title ">
+        <a href="{{ fn('get_permalink', post.ID) }}" class="text-dark">
             {{ post.title }}
         </a>
-    </h3>
+    </h5>
     <section>
         <p class="p-0 m-0">
             {{ product.get_attribute('pa_jaar') }} | {{ product.get_attribute('pa_land') }}
