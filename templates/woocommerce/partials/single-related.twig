@@ -3,7 +3,7 @@
 <article class="col-lg-3 col-md-6 mb-lg-0 mb-3 p-lg-0 vmw__single__related__card">
     <div class="text-primary text-center">
         <h6 class="vmw__related__card_title m-0">
-            <a href="{{ fn('get_permalink', current.ID) }}">
+            <a href="{{ fn('get_permalink', current.ID) }}" class="text-dark">
                 {{ current.title }}
             </a>
         </h6>
@@ -16,30 +16,43 @@
                 </a>
             </figure>
             <div class="card-content">
-                <hr>
-                <ul class="vmw__related__products__list">
-                    <li>
-                        <i class="fas fa-globe-europe"></i> {{ cur_prod.get_attribute('pa_land') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marked-alt"></i> {{ cur_prod.get_attribute('pa_streek') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-wine-glass-alt"></i> {{ cur_prod.get_attribute('pa_smaak') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-tint"></i> {{ cur_prod.get_attribute('pa_druif') }}
-                    </li>
-                    <li>
+                <div class="vmw__related__products__list">
+                    <span class="vmw__related__products__list__land vmw__related__products__list__item">
+                        <figure>
+                            GLOBE
+                        </figure>
+                        {{ cur_prod.get_attribute('pa_land') }}
+                    </span>
+                    <span class="vmw__related__products__list__jaar vmw__related__products__list__item">
+                        <figure>
+                            CALENDAR
+                        </figure>
+                        {{ cur_prod.get_attribute('pa_jaar') }}
+                    </span>
+                    <span class="vmw__related__products__list__streek vmw__related__products__list__item">
+                        <figure>
+                            REGION
+                        </figure>
+                        {{ cur_prod.get_attribute('pa_streek') }}
+                    </span>
+                    <span class="vmw__related__products__list__druif vmw__related__products__list__item">
+                        <figure>
+                            GRAPE
+                        </figure>
+                        {{ cur_prod.get_attribute('pa_druif') }}
+                    </span>
+                    <span class="vmw__related__products__list__smaak vmw__related__products__list__item">
+                        <figure>
+                            HEART
+                        </figure>
+                        {{ cur_prod.get_attribute('pa_smaak') }}
+                    </span>
+                    <span class="vmw__related__products__list__price vmw__related__products__list__item">
                         &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
-                    </li>
-                </ul>
+                    <span>
+                </div>
             </div>
             <div class="card-footer-vmw text-center mt-auto">
-                <hr>
-                {#{% if ( fn('get_queried_object_id') === current.ID ) %}#}
-                    {#Deze heb je nu#}
-                {#{% endif %}#}
                 {% if current.ID == fn('get_queried_object_id') %}
                     <span class="bg-tertiary p-1 d-inline-block text-white has-border-radius">
                         {{ __('Huidige keuze', 'vmw') }}
