@@ -3,9 +3,6 @@
 }
 
 .has-border-radius {
-  -webkit-border-radius: 5 !important;
-  -moz-border-radius: 5 !important;
-  border-radius: 5 !important;
+  border-radius: 5px !important;
 }
 
-/*# sourceMappingURL=general.css.map */
