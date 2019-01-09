@@ -21,10 +21,10 @@ class VmwKiyohFetcher
 			
 			if( $vmw )
 			{
-				\update_option('vmw_kiyoh_score', $vmw->getTotalScore(), true );
-				\update_option('vmw_kiyoh_reviews', $vmw->getTotalReviews(), true );
-				\update_option( 'vmw_kiyoh_url', $vmw->getUrl(), true);
-				\set_transient( 'vmw_kiyoh_fetch', true, 86400);
+				\update_option('vmw_kiyoh_score', $vmw->getTotalScore());
+				\update_option('vmw_kiyoh_reviews', $vmw->getTotalReviews());
+				\update_option('vmw_kiyoh_url', $vmw->getUrl());
+				\set_transient('vmw_kiyoh_fetch', true, 86400);
 			}
 		}
 		
