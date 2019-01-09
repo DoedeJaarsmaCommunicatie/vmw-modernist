@@ -2,25 +2,41 @@
 
 <table>
     <tr class="border-bottom">
-        <th class="p-1">Land</th>
+        <th class="p-1">
+            <figure>
+                <img src="{{ fn('get_field', 'icoon_land', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
+            </figure>
+        </th>
         <td>
             {{ product.get_attribute( 'pa_land' ) }}
         </td>
     </tr>
     <tr class="border-bottom">
-        <th class="p-1">Druif</th>
+        <th class="p-1">
+            <figure>
+                <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
+            </figure>
+        </th>
         <td>
             {{ product.get_attribute( 'pa_druif' ) }}
         </td>
     </tr>
     <tr class="border-bottom">
-        <th class="p-1">Jaargang</th>
+        <th class="p-1">
+            <figure>
+                <img src="{{ fn('get_field', 'icoon_jaar', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
+            </figure>
+        </th>
         <td itemprop="releaseDate">
             {{ product.get_attribute( 'pa_jaar' ) }}
         </td>
     </tr>
     <tr>
-        <th class="p-1">Smaak</th>
+        <th class="p-1">
+            <figure>
+                <img src="{{ fn('get_field', 'icoon_smaak', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
+            </figure>
+        </th>
         <td>
             {{ product.get_attribute( 'pa_smaak' ) }}
         </td>

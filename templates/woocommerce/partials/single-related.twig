@@ -26,7 +26,6 @@
                     <span class="vmw__related__products__list__jaar vmw__related__products__list__item border-left border-bottom">
                         <figure>
                             <img src="{{ fn('get_field', 'icoon_jaar', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
-                            {{ fn('get_field', 'icoon_jaar', 'option') }}
                         </figure>
                         {{ cur_prod.get_attribute('pa_jaar') }}
                     </span>
@@ -38,8 +37,7 @@
                     </span>
                     <span class="vmw__related__products__list__druif vmw__related__products__list__item border-bottom">
                         <figure>
-                        <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
-                            {{ fn('get_field', 'icoon_druif', 'option') }}
+                            <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
                         </figure>
                         {{ cur_prod.get_attribute('pa_druif') }}
                     </span>
@@ -50,7 +48,9 @@
                         {{ cur_prod.get_attribute('pa_smaak') }}
                     </span>
                     <span class="vmw__related__products__list__price vmw__related__products__list__item border-bottom">
-                        <img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />
+                        <figure>
+                            <img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />
+                        </figure>
                         &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
                     <span>
                 </div>
