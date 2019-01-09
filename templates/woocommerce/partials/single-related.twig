@@ -17,37 +17,37 @@
             </figure>
             <div class="card-content">
                 <div class="vmw__related__products__list">
-                    <span class="vmw__related__products__list__land vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__land vmw__related__products__list__item border-bottom">
                         <figure>
                             GLOBE
                         </figure>
                         {{ cur_prod.get_attribute('pa_land') }}
                     </span>
-                    <span class="vmw__related__products__list__jaar vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__jaar vmw__related__products__list__item border-left border-bottom">
                         <figure>
                             CALENDAR
                         </figure>
                         {{ cur_prod.get_attribute('pa_jaar') }}
                     </span>
-                    <span class="vmw__related__products__list__streek vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__streek vmw__related__products__list__item border-bottom">
                         <figure>
                             REGION
                         </figure>
                         {{ cur_prod.get_attribute('pa_streek') }}
                     </span>
-                    <span class="vmw__related__products__list__druif vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__druif vmw__related__products__list__item border-bottom">
                         <figure>
                             GRAPE
                         </figure>
                         {{ cur_prod.get_attribute('pa_druif') }}
                     </span>
-                    <span class="vmw__related__products__list__smaak vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__smaak vmw__related__products__list__item border-bottom">
                         <figure>
                             HEART
                         </figure>
                         {{ cur_prod.get_attribute('pa_smaak') }}
                     </span>
-                    <span class="vmw__related__products__list__price vmw__related__products__list__item">
+                    <span class="vmw__related__products__list__price vmw__related__products__list__item border-bottom">
                         &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
                     <span>
                 </div>
