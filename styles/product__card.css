@@ -65,14 +65,14 @@
   height: 45px;
 }
 .product__horizontal__add_to_cart .btn-plusle-minum {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  -webkit-border-radius: 5 !important;
+  -moz-border-radius: 5 !important;
+  border-radius: 5 !important;
 }
 .product__horizontal__add_to_cart .btn-order {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  -webkit-border-radius: 5 !important;
+  -moz-border-radius: 5 !important;
+  border-radius: 5 !important;
 }
 .product__horizontal__add_to_cart input {
   border: 0;

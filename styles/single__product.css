@@ -108,6 +108,7 @@
 
 .vmw__single__product__order .vmw__single__product__vendor__logo {
   max-height: 150px;
+  display: block;
 }
 
 .btn-order {
