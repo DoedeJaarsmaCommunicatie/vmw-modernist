@@ -6,6 +6,8 @@
     {{ fn('the_wc_single_stock', product.get_id()) }}
     {{ product.get_id|apply_filters('product_form_add_to_cart') }}
     {{ fn('the_wc_usp') }}
-    {{ fn('the_wc_single_vendor', product.get_id()) }}
-    <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+    <p>
+        Verkoop door:
+        <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+    </p>
 </aside>
