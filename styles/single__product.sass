@@ -70,8 +70,11 @@
   grid-area: section
 
 .vmw__related__products__list
-  list-style-type: none
-  padding: 0
+  display: grid
+  grid-template-columns: "land land land jaar" "streek streek streek streek" "druif druif druif druif" "smaak smaak smaak smaak" "prijs prijs prijs prijs"
+
+  .vmw__related__products__list__item
+    display: flex
 
 .vmw__related__card__container
   +hover_shadow
@@ -95,7 +98,7 @@
 
 
 .vmw__related__image
-  max-height: 150px
+  max-height: 250px
 
 .vmw__single__product__price
   font-size: 2rem
