@@ -46,7 +46,7 @@ function the_wc_single_vendor( $product_id ) {
 function the_wc_usp() {
     ?>
     <section class="vmw__single__product__usp my-2">
-        <ul class="p-0 m-0" style="list-style-type: circle;">
+        <ul class="p-0 m-0" style="list-style-type: circle; width: 300px;">
             <li>Gratis verzending > € 70,-</li>
             <li>Per fles te bestellen</li>
             <li>Bestellen en betalen via vindmijnwijn.nl</li>
