@@ -66,6 +66,7 @@ function vmw_scripts() {
 	wp_enqueue_script( 'mobile-navigation', get_stylesheet_directory_uri() . '/js/mobile-menu.js', [], 201811, true );
 	wp_enqueue_script( 'ajax_add_to_cart', get_stylesheet_directory_uri() . '/js/add_to_cart.js', [], 201812, true );
 	wp_enqueue_script( 'plus_minus_functions', get_stylesheet_directory_uri() . '/js/plus-minus.js', [], 201812, true );
+	wp_enqueue_script( 'vue', get_stylesheet_directory_uri() . '/vue/vue.webpack.js', [], 201901 );
 	
 	
 	if( is_archive() )

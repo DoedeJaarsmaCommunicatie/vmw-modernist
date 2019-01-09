@@ -1,3 +1,4 @@
 .phploy
 vendor
 .idea
+node_modules
