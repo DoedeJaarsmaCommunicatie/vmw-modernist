@@ -30,7 +30,7 @@ function the_wc_single_stock( $product_id ) {
 	$product = wc_get_product( $product_id );
 	if( $product->is_in_stock() ) : ?>
     <section class="vmw__single__product__shipping">
-        <i class="fas fa-check-circle fa-2x text-success"></i> <span><strong>Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
+        <i class="fas fa-check-circle text-success"></i> <span><strong class="text-success">Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
     </section>
 	<?php
 	endif;
@@ -46,9 +46,11 @@ function the_wc_single_vendor( $product_id ) {
 function the_wc_usp() {
     ?>
     <section class="vmw__single__product__usp my-2">
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Gratis verzending > € 70,-
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Per fles te bestellen
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Bestellen en betalen via vindmijnwijn.nl
+        <ul class="p-0 m-0" style="list-style-type: circle;">
+            <li>Gratis verzending > € 70,-</li>
+            <li>Per fles te bestellen</li>
+            <li>Bestellen en betalen via vindmijnwijn.nl</li>
+        </ul>
     </section>
     <?php
 }

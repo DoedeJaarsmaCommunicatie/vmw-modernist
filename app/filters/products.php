@@ -131,8 +131,8 @@ function product_pa_list( $product_id, $return = true)
 function product_add_to_cart( $product_id, $return = true)
 {
     
-    $button_minus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn js-make-me-less border-tertiary-light-20 btn-plusle-minum', $product_id, '-' );
-    $button_plus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn js-make-me-more border-tertiary-light-20 btn-plusle-minum', $product_id, '+' );
+    $button_minus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn bg-white js-make-me-less border-tertiary-light-20 border-right-0 btn-plusle-minum', $product_id, '-' );
+    $button_plus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn bg-white js-make-me-more border-tertiary-light-20 border-left-0 btn-plusle-minum', $product_id, '+' );
     $input_amount = sprintf('<input type="%7$s" step="%6$d" min="%5$d" value="%4$d" size="%3$d" pattern="[0-9]*" inputmode="numeric" name="%1$s" id="%1$s" class="%2$s">',
         'quantity',
     'text-center',
@@ -149,7 +149,7 @@ function product_add_to_cart( $product_id, $return = true)
     
     $submit_button = sprintf( '<submit type="%1$s" class="%2$s">%3$s</submit>',
     'submit',
-    'btn btn-success text-uppercase text-white btn-lg ml-md-2 btn-order',
+    'btn btn-primary text-uppercase text-white btn-lg ml-md-2 btn-order',
     'Bestel'
     );
     
