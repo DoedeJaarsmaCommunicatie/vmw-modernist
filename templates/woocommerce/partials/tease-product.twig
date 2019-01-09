@@ -1,17 +1,24 @@
 {# post en product zijn beschikbaar #}
-
-<article class="vmw__recently__visited__container border border-tertiary-light-50 p-1">
+<article class="vmw__recently__visited__container p-1 text-center">
     <h3 class="product__card__title">
         <a href="{{ fn('get_permalink', post.ID) }}">
             {{ post.title }}
         </a>
     </h3>
-    <figure class="vmw__recently__visited__figure">
+    <section>
+        <p class="p-0 m-0">
+            {{ product.get_attribute('pa_jaar') }} | {{ product.get_attribute('pa_land') }}
+        </p>
+        <p class="p-0 m-0">
+            {{ product.get_attribute('pa_druif') }}
+        <p>
+    </section>
+    <figure class="product__card__figure">
         <a href="{{ fn('get_permalink', post.ID) }}">
-            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }}" class="vmw__recently__visited__image">
+            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }}" class="product__card__image">
         </a>
     </figure>
-    <section class="vmw__recently__visited__content">
-        {{ product.get_price() }}
+    <section class="product__card_price">
+        &euro; {{ product._price| round(2, 'ceil') | replace({'.': ','}) }}
     </section>
 </article>

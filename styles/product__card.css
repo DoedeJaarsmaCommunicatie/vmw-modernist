@@ -101,4 +101,21 @@
   padding: 0;
 }
 
+.product__card__title {
+  position: relative;
+  height: 2.5rem;
+  overflow-y: hidden;
+  height: 3.5rem;
+}
+.product__card__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: var(--primary);
+  width: 150px;
+}
+
 /*# sourceMappingURL=product__card.css.map */
