@@ -14,7 +14,7 @@ if( class_exists( 'Timber' ) ) {
 	$context['product']     = $product;
 	
 
-	if( is_home() ) {
+	if( is_front_page() ) {
 		Timber::render('templates/woocommerce/partials/tease-product.twig', $context);
 	} else {
 		Timber::render('templates/woocommerce/partials/tease-archive.twig', $context);
