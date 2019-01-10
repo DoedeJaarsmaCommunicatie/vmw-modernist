@@ -23,6 +23,6 @@
         </a>
     </figure>
     <section class="product__card_price">
-        &euro; {{ product._price| round(2, 'ceil') | replace({'.': ','}) }}
+        &euro; {{ product.get_price| number_format(2, ',', '.') }}
     </section>
 </article>

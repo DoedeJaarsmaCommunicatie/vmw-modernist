@@ -1,7 +1,7 @@
 <aside class="vmw__single__product__order p-2">
     {% do action('vmw_before_single_product_price') %}
     <span class="vmw__single__product__price text-right pr-0 pr-sm-1" itemprop="price">
-        &euro; {{ product.get_price() }}
+        &euro; {{ product.get_price| number_format(2, ',', '.') }}
     </span>
     {{ product.get_id|apply_filters('product_form_add_to_cart') }}
     {{ fn('the_wc_single_stock', product.get_id()) }}
