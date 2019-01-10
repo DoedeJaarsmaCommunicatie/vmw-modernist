@@ -218,6 +218,9 @@ __webpack_require__.r(__webpack_exports__);
       var k = event.target.dataset.price;
       document.querySelector('input#product-price').value = k; // TODO: Get naam from level lower!
 
+      this.prijzen.forEach(function (ob) {
+        if (ob.key === k) return ob;
+      });
       document.querySelector('[data-target="product-price"]').innerHTML = this.prijzen[k];
       this.allChevronDown();
     },
@@ -12990,16 +12993,16 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/vue/app.js */"./vue/app.js");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/checkout__form.sass */"./styles/checkout__form.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/functions.sass */"./styles/functions.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/general.sass */"./styles/general.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/product__card.sass */"./styles/product__card.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/product__filter.scss */"./styles/product__filter.scss");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/related__card.sass */"./styles/related__card.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/shopping__cart.sass */"./styles/shopping__cart.sass");
-__webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/single__product.sass */"./styles/single__product.sass");
-module.exports = __webpack_require__(/*! /Users/mitch/Documents/Doede Jaarsma communicatie/Projecten/wp/wp-content/themes/vmw_badubed/styles/vendor__card.sass */"./styles/vendor__card.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\vue\app.js */"./vue/app.js");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\checkout__form.sass */"./styles/checkout__form.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\functions.sass */"./styles/functions.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\general.sass */"./styles/general.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\product__card.sass */"./styles/product__card.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\product__filter.scss */"./styles/product__filter.scss");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\related__card.sass */"./styles/related__card.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\shopping__cart.sass */"./styles/shopping__cart.sass");
+__webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\single__product.sass */"./styles/single__product.sass");
+module.exports = __webpack_require__(/*! C:\Users\Mitch\vmw-modernist\styles\vendor__card.sass */"./styles/vendor__card.sass");
 
 
 /***/ })
