@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 414px) {
   .product__horizontal__card {
-    grid-template-areas: "img aside" "main aside";
+    grid-template-areas: "img aside" "main main";
     grid-template-columns: 1.5fr 1fr;
   }
 }
@@ -138,5 +138,6 @@
 
 .product__card__title {
   height: 3rem;
+  overflow-y: hidden;
 }
 

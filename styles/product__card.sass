@@ -30,7 +30,7 @@
   grid-template-columns: 20% 50% 30%
 
   @media screen and (max-width: 414px)
-    grid-template-areas: "img aside" "main aside"
+    grid-template-areas: "img aside" "main main"
     grid-template-columns: 1.5fr 1fr
 
   +hover_shadow
@@ -94,3 +94,4 @@
 .product__card__title
   //+product_title_bar
   height: 3rem
+  overflow-y: hidden
