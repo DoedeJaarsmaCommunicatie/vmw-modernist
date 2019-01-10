@@ -8,7 +8,7 @@
                         <img class="icon__image__attributes" src="{{ fn('get_field', 'iconen', 'option')['icoon_land']['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
                     </figure>
                 </th>
-                <td>
+                <td class="w-75">
                     {{ product.get_attribute( 'pa_land' ) }}
                 </td>
             </tr>
@@ -18,7 +18,7 @@
                         <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
                     </figure>
                 </th>
-                <td>
+                <td class="w-75">
                     {{ product.get_attribute( 'pa_druif' ) }}
                 </td>
             </tr>
@@ -32,7 +32,7 @@
                         <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_jaar']['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
                     </figure>
                 </th>
-                <td itemprop="releaseDate">
+                <td itemprop="releaseDate" class="w-75">
                     {{ product.get_attribute( 'pa_jaar' ) }}
                 </td>
             </tr>
@@ -42,7 +42,7 @@
                         <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_smaak']['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
                     </figure>
                 </th>
-                <td>
+                <td class="w-75">
                     {{ product.get_attribute( 'pa_smaak' ) }}
                 </td>
             </tr>
