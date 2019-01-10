@@ -1,30 +1,30 @@
 <template>
     <div class="vmw__special__search has-border-radius">
-        <form class="text-center text-white d-flex flex-column py-1 px-3" v-on:submit.prevent="submitData">
-            <p class="m-0">
+        <form class="text-center text-white d-flex flex-column p-2" v-on:submit.prevent="submitData">
+            <p class="m-0 mb-1">
                 Ik ben op zoek naar:
             </p>
             
-            <span class="sec-back has-border-radius my-1 d-flex justify-content-center px-3 chevron-back position-relative cursor-pointer" v-on:click="changeCategoryOpen" v-on:blur="changeCategoryOpen">
+            <span class="sec-back has-border-radius my-1 d-flex justify-content-center align-items-center px-3 chevron-back position-relative cursor-pointer" v-on:click="changeCategoryOpen" v-on:blur="changeCategoryOpen">
                 <label for="product-category" class="p-0 m-0 w-25 cursor-pointer">een</label> <span data-target="product-category">{{ categories['rode-wijn'] }}</span>
                 <input type="hidden" disabled name="product-category" id="product-category" value="rode-wijn">
-                <ul class="filter-category">
+                <ul class="filter-category pt-0 pb-0 has-border-radius">
                     <li v-for="(category, key) in categories" :key="key" :data-category="key" v-on:click="selectCategory" class="p-1 border-bottom">{{category}}</li>
                 </ul>
             </span>
             
-            <span class="sec-back has-border-radius my-1 d-flex justify-content-center px-3 position-relative cursor-pointer chevron-back" v-on:click="changeLandOpen">
+            <span class="sec-back has-border-radius my-1 d-flex justify-content-center align-items-center px-3 position-relative cursor-pointer chevron-back" v-on:click="changeLandOpen">
                 <label for="product-land" class="p-0 m-0 w-25 cursor-pointer">uit</label> <span data-target="product-land">{{ landen['*'] }}</span>
                 <input type="hidden" name="product-land" id="product-land" value="*">
-                <ul class="filter-land">
+                <ul class="filter-land pt-0 pb-0 has-border-radius">
                     <li v-for="(land, key) in landen" :key="key" :data-land="key" v-on:click="selectland" class="p-1 border-bottom">{{land}}</li>
                 </ul>
             </span>
             
-            <span class="sec-back has-border-radius my-1 d-flex justify-content-center px-3 position-relative cursor-pointer chevron-back" v-on:click="changePrijsOpen">
+            <span class="sec-back has-border-radius mt-1 mb-2 d-flex justify-content-center align-items-center px-3 position-relative cursor-pointer chevron-back" v-on:click="changePrijsOpen">
                 <label for="product-price" class="p-0 m-0 w-25 cursor-pointer">voor</label> <span data-target="product-price">{{ prijzen[0].name }}</span>
                 <input type="hidden" name="product-price" id="product-price" value="">
-                <ul class="filter-price">
+                <ul class="filter-price pt-0 pb-0 has-border-radius">
                     <li v-for="(prijs, index) in prijzen" :key="index" :data-price="prijs.key" v-on:click="selectPrijs" v-html="prijs.name" class="p-1 border-bottom">{{ index }}</li>
                 </ul>
             </span>
@@ -189,17 +189,26 @@
     
     .sec-back {
         background: $sec;
+        height: 40px;
     }
     
-    .border-bottom:last-of-type {
-        border-bottom: 0 !important;
+    .border-bottom {
+        border-color: rgba(255,255,255,0.2) !important;
+        &:last-of-type {
+            border-bottom: 0 !important;
+    
+        }
+    }
+    
+    button {
+        height: 40px;
     }
     
     .filter-category, .filter-land, .filter-price {
         display: none;
         padding: 10px;
         width: 100%;
-        top: 24px;
+        top: 45px;
         background: $sec;
         z-index: 3;
         list-style-type: none;

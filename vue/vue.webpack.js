@@ -248,7 +248,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css);", ""]);
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n*[data-v-43b5dbd3] {\n  font-family: \"Signika\";\n  font-weight: 300;\n}\nselect[data-v-43b5dbd3] {\n  border: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  -ms-appearance: none;\n  /* get rid of default appearance for IE8, 9 and 10*/\n}\n.cursor-pointer[data-v-43b5dbd3] {\n  cursor: pointer;\n}\n.chevron-back[data-v-43b5dbd3] {\n  position: relative;\n}\n.chevron-back[data-v-43b5dbd3]::after {\n  position: absolute;\n  right: 20px;\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 800;\n  content: \"\\F078\";\n  display: inline-block;\n}\n.chevron-back.up[data-v-43b5dbd3]::after {\n  content: \"\\F077\";\n}\n.vmw__special__search[data-v-43b5dbd3] {\n  background: #F2664B;\n}\n.sec-back[data-v-43b5dbd3] {\n  background: #EB5538;\n}\n.border-bottom[data-v-43b5dbd3]:last-of-type {\n  border-bottom: 0 !important;\n}\n.filter-category[data-v-43b5dbd3], .filter-land[data-v-43b5dbd3], .filter-price[data-v-43b5dbd3] {\n  display: none;\n  padding: 10px;\n  width: 100%;\n  top: 24px;\n  background: #EB5538;\n  z-index: 3;\n  list-style-type: none;\n  position: absolute;\n  text-align: left;\n}\n.filter-category.active[data-v-43b5dbd3], .filter-land.active[data-v-43b5dbd3], .filter-price.active[data-v-43b5dbd3] {\n  display: block;\n}", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n*[data-v-43b5dbd3] {\n  font-family: \"Signika\";\n  font-weight: 300;\n}\nselect[data-v-43b5dbd3] {\n  border: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n  -ms-appearance: none;\n  /* get rid of default appearance for IE8, 9 and 10*/\n}\n.cursor-pointer[data-v-43b5dbd3] {\n  cursor: pointer;\n}\n.chevron-back[data-v-43b5dbd3] {\n  position: relative;\n}\n.chevron-back[data-v-43b5dbd3]::after {\n  position: absolute;\n  right: 20px;\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 800;\n  content: \"\\F078\";\n  display: inline-block;\n}\n.chevron-back.up[data-v-43b5dbd3]::after {\n  content: \"\\F077\";\n}\n.vmw__special__search[data-v-43b5dbd3] {\n  background: #F2664B;\n}\n.sec-back[data-v-43b5dbd3] {\n  background: #EB5538;\n  height: 40px;\n}\n.border-bottom[data-v-43b5dbd3] {\n  border-color: rgba(255, 255, 255, 0.2) !important;\n}\n.border-bottom[data-v-43b5dbd3]:last-of-type {\n  border-bottom: 0 !important;\n}\nbutton[data-v-43b5dbd3] {\n  height: 40px;\n}\n.filter-category[data-v-43b5dbd3], .filter-land[data-v-43b5dbd3], .filter-price[data-v-43b5dbd3] {\n  display: none;\n  padding: 10px;\n  width: 100%;\n  top: 45px;\n  background: #EB5538;\n  z-index: 3;\n  list-style-type: none;\n  position: absolute;\n  text-align: left;\n}\n.filter-category.active[data-v-43b5dbd3], .filter-land.active[data-v-43b5dbd3], .filter-price.active[data-v-43b5dbd3] {\n  display: block;\n}", ""]);
 
 // exports
 
@@ -1368,7 +1368,7 @@ var render = function() {
     _c(
       "form",
       {
-        staticClass: "text-center text-white d-flex flex-column py-1 px-3",
+        staticClass: "text-center text-white d-flex flex-column p-2",
         on: {
           submit: function($event) {
             $event.preventDefault()
@@ -1377,7 +1377,7 @@ var render = function() {
         }
       },
       [
-        _c("p", { staticClass: "m-0" }, [
+        _c("p", { staticClass: "m-0 mb-1" }, [
           _vm._v("\n            Ik ben op zoek naar:\n        ")
         ]),
         _vm._v(" "),
@@ -1385,7 +1385,7 @@ var render = function() {
           "span",
           {
             staticClass:
-              "sec-back has-border-radius my-1 d-flex justify-content-center px-3 chevron-back position-relative cursor-pointer",
+              "sec-back has-border-radius my-1 d-flex justify-content-center align-items-center px-3 chevron-back position-relative cursor-pointer",
             on: { click: _vm.changeCategoryOpen, blur: _vm.changeCategoryOpen }
           },
           [
@@ -1414,7 +1414,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "ul",
-              { staticClass: "filter-category" },
+              { staticClass: "filter-category pt-0 pb-0 has-border-radius" },
               _vm._l(_vm.categories, function(category, key) {
                 return _c(
                   "li",
@@ -1436,7 +1436,7 @@ var render = function() {
           "span",
           {
             staticClass:
-              "sec-back has-border-radius my-1 d-flex justify-content-center px-3 position-relative cursor-pointer chevron-back",
+              "sec-back has-border-radius my-1 d-flex justify-content-center align-items-center px-3 position-relative cursor-pointer chevron-back",
             on: { click: _vm.changeLandOpen }
           },
           [
@@ -1464,7 +1464,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "ul",
-              { staticClass: "filter-land" },
+              { staticClass: "filter-land pt-0 pb-0 has-border-radius" },
               _vm._l(_vm.landen, function(land, key) {
                 return _c(
                   "li",
@@ -1486,7 +1486,7 @@ var render = function() {
           "span",
           {
             staticClass:
-              "sec-back has-border-radius my-1 d-flex justify-content-center px-3 position-relative cursor-pointer chevron-back",
+              "sec-back has-border-radius mt-1 mb-2 d-flex justify-content-center align-items-center px-3 position-relative cursor-pointer chevron-back",
             on: { click: _vm.changePrijsOpen }
           },
           [
@@ -1514,7 +1514,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "ul",
-              { staticClass: "filter-price" },
+              { staticClass: "filter-price pt-0 pb-0 has-border-radius" },
               _vm._l(_vm.prijzen, function(prijs, index) {
                 return _c(
                   "li",

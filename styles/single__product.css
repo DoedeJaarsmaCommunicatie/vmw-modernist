@@ -4,34 +4,42 @@
   grid-template-columns: 20% 1fr 1fr 25%;
   grid-column-gap: 40px;
 }
+
 @media screen and (max-width: 768px) {
   .vmw__single__product {
     grid-template-areas: "header header header header" "img img aside aside" "main main main main" "section section section section" "reviews reviews reviews reviews" "cards cards cards cards" "random random random random";
   }
 }
+
 @media screen and (max-width: 414px) {
   .vmw__single__product {
     grid-template-areas: "header header header header" "img img img img" "aside aside aside aside" "main main main main" "section section section section" "reviews reviews reviews reviews" "cards cards cards cards" "random random random random";
   }
 }
+
 .vmw__single__product .vmw__single__product__header {
   grid-area: header;
 }
+
 .vmw__single__product .vmw__single__product__aside {
   grid-area: img;
 }
+
 .vmw__single__product .vmw__single__product__main {
   grid-area: main;
 }
+
 .vmw__single__product .vmw__single__product__order {
   grid-area: aside;
   height: 420px;
   display: grid;
   grid-template-areas: "a" "b" "c" "d";
 }
+
 .vmw__single__product .vmw__single__product__reviews {
   grid-area: reviews;
 }
+
 .vmw__single__product .vmw__single__product__cards {
   grid-area: cards;
 }
@@ -54,13 +62,16 @@
   grid-template-columns: 70% 30%;
   height: 350px;
 }
+
 .vmw__single__product__vendor__container .vmw__single__product__vendor__figure {
   grid-area: figure;
   display: flex;
 }
+
 .vmw__single__product__vendor__container .vmw__single__product__vendor__figure img {
   align-self: center;
 }
+
 .vmw__single__product__vendor__container .vmw__single__product__vendor__content {
   grid-area: section;
   overflow-y: scroll;
@@ -69,6 +80,7 @@
 .vmw__single__product__foundit {
   grid-area: random;
 }
+
 .vmw__single__product__foundit article {
   padding: 0 !important;
 }
@@ -82,41 +94,41 @@
   grid-template-areas: "land land land jaar" "streek streek streek streek" "druif druif druif druif" "smaak smaak smaak smaak" "prijs prijs prijs prijs";
   grid-template-columns: 25% 25% 25% 25%;
 }
+
 .vmw__related__products__list .vmw__related__products__list__item {
   display: flex;
 }
+
 .vmw__related__products__list .vmw__related__products__list__land {
   grid-area: land;
 }
+
 .vmw__related__products__list .vmw__related__products__list__jaar {
   grid-area: jaar;
 }
+
 .vmw__related__products__list .vmw__related__products__list__streek {
   grid-area: streek;
 }
+
 .vmw__related__products__list .vmw__related__products__list__druif {
   grid-area: druif;
 }
+
 .vmw__related__products__list .vmw__related__products__list__smaak {
   grid-area: smaak;
 }
+
 .vmw__related__products__list .vmw__related__products__list__price {
   grid-area: prijs;
 }
+
 .vmw__related__products__list .icon__image__attributes {
   width: 15px;
 }
 
 .vmw__related__card__container:hover {
-  -webkit-box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
-  -moz-box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
   box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
-}
-
-.vmw__related__card__container {
-  -webkit-border-radius: 5px !important;
-  -moz-border-radius: 5px !important;
-  border-radius: 5px !important;
 }
 
 .vmw__related__card_title {
@@ -124,12 +136,14 @@
   height: 2.5rem;
   overflow-y: hidden;
 }
+
 .vmw__related__card_title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 1px;
   background: var(--primary);
   width: 150px;
@@ -163,8 +177,7 @@
 .alternatives_background {
   background-position-y: 2.5rem;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
+  height: 550px;
 }
 
-/*# sourceMappingURL=single__product.css.map */
