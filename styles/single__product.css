@@ -127,6 +127,10 @@
   width: 15px;
 }
 
+.vmw__related__card__container {
+  border-radius: 0 !important;
+}
+
 .vmw__related__card__container:hover {
   box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
 }
