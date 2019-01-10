@@ -1,4 +1,3 @@
-{#{{ dump(current) }}#}
 {% set cur_prod = fn('wc_get_product', current.ID) %}
 <article class="col-lg-3 col-md-6 mb-lg-0 mb-3 p-lg-0 vmw__single__related__card">
     <div class="text-primary text-center">
@@ -18,39 +17,39 @@
             <div class="card-content">
                 <div class="vmw__related__products__list">
                     <span class="vmw__related__products__list__land vmw__related__products__list__item border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'icoon_land', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
-                        </figure>
+                    <figure>
+                        <img class="icon__image__attributes" src="{{ fn('get_field', 'iconen', 'option')['icoon_land']['url'] }}" alt="{{ current.get_attribute('pa_land') }}" />
+                    </figure>
                         {{ cur_prod.get_attribute('pa_land') }}
                     </span>
                     <span class="vmw__related__products__list__jaar vmw__related__products__list__item border-left border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'icoon_jaar', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
-                        </figure>
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_jaar']['url'] }}" alt="{{ current.get_attribute('pa_jaar') }}" />
+                    </figure>
                         {{ cur_prod.get_attribute('pa_jaar') }}
                     </span>
                     <span class="vmw__related__products__list__streek vmw__related__products__list__item border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'icoon_streek', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_streek') }}" />
-                        </figure>
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_streek']['url'] }}" alt="{{ current.get_attribute('pa_streek') }}" />
+                    </figure>
                         {{ cur_prod.get_attribute('pa_streek') }}
                     </span>
                     <span class="vmw__related__products__list__druif vmw__related__products__list__item border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
-                        </figure>
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ current.get_attribute('pa_druif') }}" />
+                    </figure>
                         {{ cur_prod.get_attribute('pa_druif') }}
                     </span>
                     <span class="vmw__related__products__list__smaak vmw__related__products__list__item border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'icoon_smaak', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
-                        </figure>
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_smaak']['url'] }}" alt="{{ current.get_attribute('pa_smaak') }}" />
+                    </figure>
                         {{ cur_prod.get_attribute('pa_smaak') }}
                     </span>
                     <span class="vmw__related__products__list__price vmw__related__products__list__item border-bottom">
-                        <figure>
-                            <img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />
-                        </figure>
+                        {#<figure>#}
+                            {#<img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />#}
+                        {#</figure>#}
                         &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
                     <span>
                 </div>
