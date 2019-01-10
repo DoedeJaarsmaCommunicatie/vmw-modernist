@@ -55,4 +55,10 @@
     </article>
     {% do action('woocommerce_after_single_product') %}
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let el = document.querySelector('[data-background]')
+            el.style.backgroundImage = `url( ${el.dataset.background}`
+        })
+    </script>
 {% endblock  %}
