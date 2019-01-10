@@ -1,6 +1,6 @@
 <aside class="vmw__single__product__order p-2">
     {% do action('vmw_before_single_product_price') %}
-    <span class="vmw__single__product__price text-right" itemprop="price">
+    <span class="vmw__single__product__price text-right pr-0 pr-sm-1" itemprop="price">
         &euro; {{ product.get_price() }}
     </span>
     {{ product.get_id|apply_filters('product_form_add_to_cart') }}
@@ -8,6 +8,8 @@
     {{ fn('the_wc_usp') }}
     <p>
         Verkoop door:
-        <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+        <a href="{{ fn('get_term_link', vendor.term_id) }}">
+            <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
+        </a>
     </p>
 </aside>

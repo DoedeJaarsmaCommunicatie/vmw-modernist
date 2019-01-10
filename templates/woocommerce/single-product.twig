@@ -17,10 +17,10 @@
         </aside>
         <main class="vmw__single__product__main">
             <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-                <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}" itemprop="name">
+                <h1 class="vmw__single__product__header__title mb-0" id="single_product_title_{{ post.id }}" itemprop="name">
                     {{ post.title }}
                 </h1>
-                <p>{{ __('Verkoop door:', 'vmw') }} <span class="text-primary">{{ vendor.name }}</span></p>
+                <p>{{ __('Verkoop door:', 'vmw') }} <a href="{{ fn('get_term_link', vendor.term_id) }}" class="text-primary">{{ vendor.name }}</a></p>
             </header>
             {% do action('vmw_before_single_product_summary') %}
             <div class="summary entry-summary">

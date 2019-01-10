@@ -30,6 +30,7 @@ body {
 
 .vwm__search__shortened {
     width: calc( 100% - 43px ) !important;
+    height: 45px;
 }
 
 .vmw__navigation__parent {
