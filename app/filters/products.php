@@ -147,7 +147,7 @@ function product_add_to_cart( $product_id, $return = true)
     'product_id'
     );
     
-    $submit_button = sprintf( '<input type="%1$s" class="%2$s" value="%3$s" />',
+    $submit_button = sprintf( '<input type="%1$s" class="%2$s" value="%3$s" style="width: 95px;" />',
     'submit',
     'btn bg-primary text-uppercase text-white btn-lg ml-md-2 btn-order border-0 mt-1 mt-sm-0',
     'Bestel'
@@ -155,7 +155,7 @@ function product_add_to_cart( $product_id, $return = true)
     
 	$html = sprintf('<form data-action="%1$s" class="%2$s">%3$s %4$s %5$s %6$s %7$s</form>',
         'product_add_to_cart',
-        'product__horizontal__add_to_cart',
+        'product__horizontal__add_to_cart justify-content-center',
         $button_minus, $input_amount, $button_plus, $input_hidden, $submit_button);
 	
     if( $return )

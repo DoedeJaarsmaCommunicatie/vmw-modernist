@@ -16,7 +16,7 @@
         {% include 'templates/woocommerce/partials/single-attributes.twig' %}
     </section>
     <aside class="product__horizontal__buy p-md-3">
-        <p class="text-primary product__horizontal__price">
+        <p class="text-primary product__horizontal__price text-center text-sm-left">
             &euro; {{ product.get_price }}
         </p>
         {{ post.ID|apply_filters('product_form_add_to_cart') }}
