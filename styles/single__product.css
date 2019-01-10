@@ -185,6 +185,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 5rem;
-  box-shadow: 0 2.5rem 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
 }
 
