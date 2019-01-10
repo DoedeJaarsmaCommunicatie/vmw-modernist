@@ -128,9 +128,7 @@
             selectPrijs: function (ev) {
                 let k = event.target.dataset.price
                 document.querySelector('input#product-price').value = k;
-                // TODO: Get naam from level lower!
                 this.prijzen.forEach( ob => {
-                    console.log(ob)
                     if( ob.key === k) {
                         document.querySelector('[data-target="product-price"]').innerHTML = ob.name
                     }

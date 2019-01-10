@@ -216,11 +216,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     selectPrijs: function selectPrijs(ev) {
       var k = event.target.dataset.price;
-      document.querySelector('input#product-price').value = k; // TODO: Get naam from level lower!
-
+      document.querySelector('input#product-price').value = k;
       this.prijzen.forEach(function (ob) {
-        console.log(ob);
-
         if (ob.key === k) {
           document.querySelector('[data-target="product-price"]').innerHTML = ob.name;
         }
