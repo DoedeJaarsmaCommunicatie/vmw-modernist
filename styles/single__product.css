@@ -171,7 +171,7 @@
 }
 
 .icon__image__attributes {
-  width: 25px;
+  width: 25px !important;
 }
 
 .vmw__single__related__card {
