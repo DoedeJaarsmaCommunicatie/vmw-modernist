@@ -28,7 +28,7 @@ class CartAdder {
 class AddForm {
     constructor( form ) {
         this.form = form
-        this.submit_button = this.formSelect( 'submit' )
+        this.submit_button = this.formSelect( 'input[type="submit"]' )
 
         this.submit_button.addEventListener('click', () => {
             this.quantity = this.formSelect('#quantity').value
