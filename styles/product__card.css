@@ -108,19 +108,22 @@
   grid-template-columns: 30% auto;
 }
 
+.vmw__recently__visited__container:hover {
+  box-shadow: rgba(255, 255, 255, 0.2);
+}
+
 .vmw__product__attributes {
   list-style: none;
   padding: 0;
 }
 
-.product__card__title {
+.product__card__border__title {
   position: relative;
   height: 2.5rem;
   overflow-y: hidden;
-  height: 3rem;
 }
 
-.product__card__title::after {
+.product__card__border__title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -130,5 +133,9 @@
   height: 1px;
   background: var(--primary);
   width: 150px;
+}
+
+.product__card__title {
+  height: 3rem;
 }
 

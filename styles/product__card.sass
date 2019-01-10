@@ -80,11 +80,16 @@
 .vmw__recently__visited__container
   display: grid
   grid-template-columns: 30% auto
+  &:hover
+    box-shadow: rgba(255,255,255,0.2)
+
 
 .vmw__product__attributes
   +normalize_list
 
+.product__card__border__title
+  +product_title_bar
 
 .product__card__title
-  +product_title_bar
+  //+product_title_bar
   height: 3rem
