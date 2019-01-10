@@ -128,6 +128,7 @@
             selectPrijs: function (ev) {
                 let k = event.target.dataset.price
                 document.querySelector('input#product-price').value = k;
+                // TODO: Get naam from level lower!
                 document.querySelector('[data-target="product-price"]').innerHTML = this.prijzen[k]
                 this.allChevronDown();
             },
