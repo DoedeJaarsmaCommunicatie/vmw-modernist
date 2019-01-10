@@ -17,7 +17,7 @@
     </section>
     <aside class="product__horizontal__buy p-md-3">
         <p class="text-primary product__horizontal__price text-center text-sm-left">
-            &euro; {{ product.get_price }}
+            &euro; {{ product.get_price| round(2, 'ceil') | replace({'.': ','}) }}
         </p>
         {{ post.ID|apply_filters('product_form_add_to_cart') }}
     </aside>
