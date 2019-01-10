@@ -1,12 +1,11 @@
 {% do action('vmw_before_single_attributes') %}
-
 <div class="row">
     <div class="col-md-6 pr-md-0">
         <table class="w-100">
             <tr class="border-bottom">
                 <th class="p-1">
                     <figure>
-                        <img src="{{ fn('get_field', 'icoon_land', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
+                        <img class="icon__image__attributes" src="{{ fn('get_field', 'iconen', 'option')['icoon_land']['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
                     </figure>
                 </th>
                 <td>
@@ -16,7 +15,7 @@
             <tr class="border-bottom">
                 <th class="p-1">
                     <figure>
-                        <img src="{{ fn('get_field', 'pa_druif', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
                     </figure>
                 </th>
                 <td>
@@ -30,7 +29,7 @@
             <tr class="border-bottom">
                 <th class="p-1">
                     <figure>
-                        <img src="{{ fn('get_field', 'icoon_jaar', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_jaar']['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
                     </figure>
                 </th>
                 <td itemprop="releaseDate">
@@ -40,7 +39,7 @@
             <tr class="border-bottom">
                 <th class="p-1">
                     <figure>
-                        <img src="{{ fn('get_field', 'icoon_smaak', 'option')['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_smaak']['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
                     </figure>
                 </th>
                 <td>
