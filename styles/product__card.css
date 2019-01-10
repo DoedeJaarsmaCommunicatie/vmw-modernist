@@ -121,6 +121,7 @@
   position: relative;
   height: 2.5rem;
   overflow-y: hidden;
+  height: 1px;
 }
 
 .product__card__border__title::after {
