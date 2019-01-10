@@ -126,7 +126,7 @@
                 this.allChevronDown();
             },
             selectPrijs: function (ev) {
-                let k = ev.target.dataset.price
+                let k = event.target.dataset.price
                 document.querySelector('input#product-price').value = k;
                 document.querySelector('[data-target="product-price"]').innerHTML = this.prijzen[k]
                 this.allChevronDown();

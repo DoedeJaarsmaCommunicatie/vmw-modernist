@@ -215,7 +215,7 @@ __webpack_require__.r(__webpack_exports__);
       this.allChevronDown();
     },
     selectPrijs: function selectPrijs(ev) {
-      var k = ev.target.dataset.price;
+      var k = event.target.dataset.price;
       document.querySelector('input#product-price').value = k;
       document.querySelector('[data-target="product-price"]').innerHTML = this.prijzen[k];
       this.allChevronDown();
