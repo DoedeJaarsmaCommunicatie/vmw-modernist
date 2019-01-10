@@ -218,10 +218,13 @@ __webpack_require__.r(__webpack_exports__);
       var k = event.target.dataset.price;
       document.querySelector('input#product-price').value = k; // TODO: Get naam from level lower!
 
-      var ob = this.prijzen.forEach(function (ob) {
-        if (ob.key === k) return ob;
+      this.prijzen.forEach(function (ob) {
+        console.log(ob);
+
+        if (ob.key === k) {
+          document.querySelector('[data-target="product-price"]').innerHTML = ob.name;
+        }
       });
-      document.querySelector('[data-target="product-price"]').innerHTML = ob.name;
       this.allChevronDown();
     },
     allChevronDown: function allChevronDown() {
