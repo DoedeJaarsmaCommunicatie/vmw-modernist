@@ -54,17 +54,19 @@
                     <span>
                 </div>
             </div>
-            <div class="card-footer-vmw text-center mt-auto">
                 {% if current.ID == fn('get_queried_object_id') %}
-                    <span class="bg-tertiary p-1 d-inline-block text-white has-border-radius">
-                        {{ __('Huidige keuze', 'vmw') }}
-                    </span>
+                    <div class="card-footer-vmw text-center mt-3">
+                        <span class="bg-tertiary p-1 d-inline-block text-white has-border-radius">
+                            {{ __('Huidige keuze', 'vmw') }}
+                        </span>
+                    </div>
                 {% else %}
-                    <a href="{{ fn('get_permalink', current.ID) }}" class="bg-primary p-1 d-inline-block text-white has-border-radius">
-                        {{ __('Selecteer', 'vmw') }}
-                    </a>
+                    <div class="card-footer-vmw text-center mt-2">
+                            <a href="{{ fn('get_permalink', current.ID) }}" class="bg-primary p-1 d-inline-block text-white has-border-radius">
+                                {{ __('Selecteer', 'vmw') }}
+                            </a>
+                    </div>
                 {% endif %}
-            </div>
         </div>
     </div>
 </article>
