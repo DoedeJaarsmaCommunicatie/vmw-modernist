@@ -31,6 +31,7 @@ array_map(
 		'filters/products',
 		
 		'shortcodes/vendors',
+		'shortcodes/search',
 		
 		'actions/products_filter',
 	]
