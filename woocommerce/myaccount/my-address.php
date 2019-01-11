@@ -29,6 +29,7 @@ if( class_exists( 'Timber' ) ) {
 			'billing' => __( 'Billing address', 'woocommerce' ),
 			'shipping' => __( 'Shipping address', 'woocommerce' ),
 		), $customer_id );
+		
 	} else {
 		$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
 			'billing' => __( 'Billing address', 'woocommerce' ),
@@ -37,7 +38,7 @@ if( class_exists( 'Timber' ) ) {
 	
 	$context['address'] = $get_addresses;
 	
-	\Timber\Timber::render('templates/', $context);
+	\Timber\Timber::render('templates/woocommerce/account/partials/my-address.twig', $context);
 } else {
 	
 	$customer_id = get_current_user_id();
