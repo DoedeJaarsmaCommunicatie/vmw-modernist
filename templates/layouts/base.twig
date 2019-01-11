@@ -11,7 +11,11 @@
 {% block head %}
     {# It is possible to overwrite this block and add custom code to the head #}
 {% endblock %}
-
+<style>
+    #zoekresultaten {
+        position: absolute;
+    }
+</style>
 </head> {# Opened in base-head.twig #}
 
 {# Base body. Overwrite where needed. #}
@@ -51,7 +55,7 @@
         placeHolder: "Zoeken",     // Place Holder text                 | (Optional)
         selector: "#autoComplete",           // Input field selector              | (Optional)
         threshold: 0,                        // Min. Chars length to start Engine | (Optional)
-        searchEngine: "loose",              // Search Engine type/mode           | (Optional)
+        searchEngine: "strict",              // Search Engine type/mode           | (Optional)
         resultsList: {                       // Rendered results list object      | (Optional)
             container: source => {
                 resultsListID = "zoekresultaten";
