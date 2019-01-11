@@ -7,7 +7,7 @@
  */
 
 function the_search_form () { ?>
-	<form action="<?=get_bloginfo('url')?>">
+	<form action="<?=get_bloginfo('url')?>" id="searchform">
 		<div class="input-group d-flex position-relative">
 			<input type="text" class="border-dark form-control vwm__search__shortened" placeholder="<?=__( 'Zoeken...', 'vmw')?>" aria-label="<?=__( 'Search...', 'vmw')?>" aria-describedby="search-submit" id="autoComplete" name="s">
             <input type="hidden" name="post_type" id="post_type" value="product">

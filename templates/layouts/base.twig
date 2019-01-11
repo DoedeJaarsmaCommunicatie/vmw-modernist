@@ -15,6 +15,7 @@
     #zoekresultaten {
         position: absolute;
         top: 100%;
+        z-index: 4;
     }
 </style>
 </head> {# Opened in base-head.twig #}
@@ -72,6 +73,7 @@
         maxResults: 5,                         // Max. number of rendered results | (Optional)
         onSelection: feedback => {             // Action script onSelection event | (Optional)
             console.log(feedback);
+            jQuery.submit(document.querySelector('#searchform'))
         }
     });
 </script>
