@@ -74,7 +74,7 @@
 
 .vmw__single__product__vendor__container .vmw__single__product__vendor__content {
   grid-area: section;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .vmw__single__product__foundit {
