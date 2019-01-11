@@ -8,10 +8,17 @@
         {% do action('woocommerce_before_shop_loop') %}
     </div>
 
-    <div class="loop">
-        {% for post in products %}
-            {% include ["templates/woocommerce/partials/tease-product.twig"] %}
-        {% endfor %}
+    <div class="row">
+        <div class="col-md-2">
+            {% filter shortcodes %}
+        </div>
+        <div class="col-md-10">
+            <div class="loop">
+                {% for post in products %}
+                    {% include ["templates/woocommerce/partials/tease-archive.twig"] %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
     {% do action('woocommerce_after_shop_loop') %}
