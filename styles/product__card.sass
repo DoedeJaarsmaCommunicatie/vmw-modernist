@@ -1,4 +1,5 @@
-@import "functions"
+@import "helpers/all"
+// @deprecated
 .product__card
   display:  flex
   flex-direction:  column
@@ -28,12 +29,11 @@
   display: grid
   grid-template-areas: "img main aside"
   grid-template-columns: 20% 50% 30%
+  +hover_shadow
 
-  @media screen and (max-width: 414px)
+  +mobile_only
     grid-template-areas: "img aside" "main main"
     grid-template-columns: 1.5fr 1fr
-
-  +hover_shadow
 
   .product__horizontal__image
     grid-area: img
@@ -46,7 +46,7 @@
   .product__horizontal__buy
     grid-area: aside
     font-size: 2rem
-    @media screen and (max-width: 414px)
+    +mobile_only
       .product__horizontal__add_to_cart
         flex-wrap: wrap
         #quantity
@@ -81,7 +81,8 @@
   display: grid
   grid-template-columns: 30% auto
   &:hover
-    box-shadow: rgba(255,255,255,0.2)
+    +box_shadow(rgb(255,255,255), 0.2)
+    //box-shadow: rgba(255,255,255,0.2)
 
 
 .vmw__product__attributes

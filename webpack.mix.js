@@ -17,7 +17,6 @@ mix
 
 mix
     .sass('styles/checkout__form.sass', 'styles/checkout__form.css')
-    .sass('styles/functions.sass', 'styles/functions.css')
     .sass('styles/general.sass', 'styles/general.css')
     .sass('styles/product__card.sass', 'styles/product__card.css')
     .sass('styles/product__filter.scss', 'styles/product__filter.css')

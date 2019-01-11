@@ -1,7 +1,6 @@
 {
     "/vue/vue.webpack.js": "/vue/vue.webpack.js",
     "/styles/checkout__form.css": "/styles/checkout__form.css",
-    "/styles/functions.css": "/styles/functions.css",
     "/styles/general.css": "/styles/general.css",
     "/styles/product__card.css": "/styles/product__card.css",
     "/styles/product__filter.css": "/styles/product__filter.css",

@@ -1,10 +1,4 @@
-@import "functions"
-.transit
-  -webkit-transition: all 0.3s
-  -moz-transition: all 0.3s
-  -ms-transition: all 0.3s
-  -o-transition: all 0.3s
-  transition: all 0.3s
+@import "helpers/all"
 
 .shopping__cart__container
   @extend .transit
@@ -69,8 +63,7 @@
   align-items: stretch
 
   .wac-qty-button
-    border-radius: 0
-    border-radius: 0
+    +remove_border_radius
     padding: 0
     display: flex
     width: 30px

@@ -1,3 +1,14 @@
+.woocommerce-input-field-template {
+  height: 40px;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  padding-left: 15px;
+  border-radius: 5px !important;
+}
+
+.transit {
+  transition: all 0.3s;
+}
+
 .product__card {
   display: flex;
   flex-direction: column;
@@ -33,15 +44,15 @@
   grid-template-columns: 20% 50% 30%;
 }
 
+.product__horizontal__card:hover {
+  box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
+}
+
 @media screen and (max-width: 414px) {
   .product__horizontal__card {
     grid-template-areas: "img aside" "main main";
     grid-template-columns: 1.5fr 1fr;
   }
-}
-
-.product__horizontal__card:hover {
-  box-shadow: 0 0 8px 3px rgba(244, 244, 244, 0.6);
 }
 
 .product__horizontal__card .product__horizontal__image {
@@ -109,7 +120,7 @@
 }
 
 .vmw__recently__visited__container:hover {
-  box-shadow: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.2);
 }
 
 .vmw__product__attributes {
