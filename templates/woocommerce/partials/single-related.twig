@@ -1,5 +1,5 @@
 {% set cur_prod = fn('wc_get_product', current.ID) %}
-<article class="col-lg-3 col-md-6 mb-lg-0 mb-3 p-lg-0 vmw__single__related__card">
+<article class="col-lg-3 col-md-6 mb-lg-0 mb-3 p-lg-0 vmw__single__related__card {{ (current.ID == fn('get_queried_object_id'))? ' d-none d-sm-block': '' }}">
     <div class="text-primary text-center">
         <h6 class="vmw__related__card_title m-0">
             <a href="{{ fn('get_permalink', current.ID) }}" class="text-dark">
