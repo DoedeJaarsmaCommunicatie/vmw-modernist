@@ -73,7 +73,7 @@
         maxResults: 5,                         // Max. number of rendered results | (Optional)
         onSelection: feedback => {             // Action script onSelection event | (Optional)
             console.log(feedback);
-            jQuery.submit(document.querySelector('#searchform'))
+            document.querySelector('#searchform').submit()
         }
     });
 </script>
