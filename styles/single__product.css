@@ -126,6 +126,7 @@
 }
 
 .vmw__related__products__list .icon__image__attributes {
+  width: 15px;
   margin-right: 0.5rem;
 }
 
@@ -167,10 +168,6 @@
 
 .btn-order {
   width: 100%;
-}
-
-.icon__image__attributes {
-  width: 25px !important;
 }
 
 .vmw__single__related__card {
