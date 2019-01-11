@@ -11,7 +11,7 @@
         <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
-                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }}" class="vmw__single__product__image" itemprop="image" />
+                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="vmw__single__product__image" itemprop="image" />
             </figure>
             {% do action('vmw_after_single_product_image') %}
         </aside>
