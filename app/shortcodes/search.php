@@ -15,5 +15,5 @@ add_shortcode( 'search_results', function ( $atts ) {
 		'search' => $_GET['s']?? ''
 	], $atts);
 	
-	return \Timber\Timber::render('templates/shortcodes/search_results.twig', $atts);
+	return \Timber\Timber::compile('templates/shortcodes/search_results.twig', $atts);
 });
