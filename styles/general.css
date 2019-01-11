@@ -10,3 +10,8 @@
   margin-top: 1rem;
 }
 
+.woocommerce-input-wrapper input {
+  height: 45px;
+  border-radius: 5px !important;
+}
+

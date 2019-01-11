@@ -1,0 +1,8 @@
+{% do 'woocommerce_before_edit_account_address_form' %}
+{{ dump(load_address) }}
+<form method="post">
+
+    <h3>
+        {{ ''|apply_filters('woocommerce_my_account_edit_Address_title', title, load_address) }}
+    </h3>
+</form>
