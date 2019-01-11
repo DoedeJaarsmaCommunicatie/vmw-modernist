@@ -108,6 +108,10 @@
   grid-area: jaar;
 }
 
+.vmw__related__products__list .vmw__related__products__list__jaar .icon__image__attributes {
+  margin-left: 0.5rem;
+}
+
 .vmw__related__products__list .vmw__related__products__list__streek {
   grid-area: streek;
 }
