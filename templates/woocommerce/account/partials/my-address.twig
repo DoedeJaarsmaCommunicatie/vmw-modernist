@@ -1,10 +1,18 @@
-{{ dump(customer) }}
-{{ dump(addresses) }}
-
 <div class="row">
-    {% for address in addresses %}
+    {% for key, title in addresses %}
         <div class="col-md-6">
-            {{ dump(address) }}
+            <header>
+                <h3>{{ title }}</h3>
+                <a href="{{ fn('wc_get_endpoint_url', 'edit-address', key) }}">{{ __('Edit', 'woocommerce') }}</a>
+            </header>
+            <address>
+                {% if fn('wc_get_account_formatted_address', key) %}
+                    {{ fn('wc_get_account_formatted_address', key) }}
+                    {#{{ fn('wp_kses_post', key) }}#}
+                {% else %}
+                    {{ __('You have not set up this type of address yet.', 'woocommerce') }}
+                {% endif %}
+            </address>
         </div>
     {% endfor %}
 </div>
