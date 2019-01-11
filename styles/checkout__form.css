@@ -17,7 +17,7 @@
   margin-left: initial;
 }
 
-#wizard-p-0 .ship-to-different-address {
+#wizard-p-0 #ship-to-different-address {
   cursor: pointer;
 }
 
