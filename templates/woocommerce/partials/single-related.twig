@@ -50,7 +50,7 @@
                         {#<figure>#}
                             {#<img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />#}
                         {#</figure>#}
-                        &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
+                        <span>&euro;</span> {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
                     <span>
                 </div>
             </div>
