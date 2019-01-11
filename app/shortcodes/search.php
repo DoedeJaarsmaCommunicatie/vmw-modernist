@@ -11,7 +11,7 @@ add_shortcode( 'search_results', function ( $atts ) {
 		'tag'   =>  'h1',
 		'class' =>  '',
 		'id'    =>  '',
-		'content' => 'Zoekresultaten voor:',
+		'title' => 'Zoekresultaten voor:',
 		'search' => $_GET['s']?? ''
 	], $atts);
 	
