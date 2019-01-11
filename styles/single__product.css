@@ -91,11 +91,12 @@
 
 .vmw__related__products__list {
   display: grid;
-  grid-template-areas: "land land land jaar" "streek streek streek streek" "druif druif druif druif" "smaak smaak smaak smaak" "prijs prijs prijs prijs";
+  grid-template-areas: "land land land jaar" "streek streek streek streek" "druif druif druif druif" "smaak smaak smaak smaak";
   grid-template-columns: 25% 25% 25% 25%;
 }
 
 .vmw__related__products__list .vmw__related__products__list__item {
+  text-align: left;
   display: flex;
 }
 
@@ -121,18 +122,17 @@
   min-height: 3.1rem;
 }
 
-.vmw__related__products__list .vmw__related__products__list__price {
-  grid-area: prijs;
-}
-
 .vmw__related__products__list .icon__image__attributes {
   width: 15px;
   margin-right: 0.5rem;
 }
 
 .vmw__related__card__container {
-  box-shadow: 0 0 8px 3px rgba(51, 51, 51, 0.6);
   border-radius: 0 !important;
+}
+
+.vmw__related__card__container:first-of-type {
+  box-shadow: 0 0 8px 3px rgba(51, 51, 51, 0.6);
 }
 
 .vmw__related__card_title {

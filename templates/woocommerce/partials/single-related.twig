@@ -46,14 +46,11 @@
                     </figure>
                         {{ cur_prod.get_attribute('pa_smaak') }}
                     </span>
-                    <span class="vmw__related__products__list__price vmw__related__products__list__item border-bottom">
-                        {#<figure>#}
-                            {#<img src="{{ fn('get_field', 'icoon_prijs', 'option')['url'] }}" alt="{{ current._price| round(2, 'ceil') | replace({'.': ','}) }}" />#}
-                        {#</figure>#}
-                        <span>&euro;</span> {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
-                    <span>
                 </div>
             </div>
+            <strong class="vmw__related__products__price text-center">
+                <span>&euro;</span> {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
+            </strong>
                 {% if current.ID == fn('get_queried_object_id') %}
                     <div class="card-footer-vmw text-center mt-3">
                         <span class="bg-tertiary p-1 d-inline-block text-white has-border-radius">
