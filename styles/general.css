@@ -6,3 +6,7 @@
   border-radius: 5px !important;
 }
 
+.mt-2-my-images img {
+  margin-top: 1rem;
+}
+
