@@ -40,5 +40,4 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Product',
 		'parent_slug'	=> 'theme-options',
 	));
-	
 }
