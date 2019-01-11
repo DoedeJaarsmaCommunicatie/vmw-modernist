@@ -8,7 +8,7 @@
         </header>
 
         {% for post in posts %}
-            {% include ['templates/parts/tease-search.twig', 'templates/parts/tease.twig'] %}
+            {% include [ 'templates/woocommerce/parts/tease-archive.twig' , 'templates/parts/tease-search.twig', 'templates/parts/tease.twig'] %}
         {% endfor %}
         {#{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}#}
     </section>
