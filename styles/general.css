@@ -15,3 +15,7 @@
   border-radius: 5px !important;
 }
 
+.woocommerce-address-fields__field-wrapper .form-row {
+  flex-direction: column;
+}
+
