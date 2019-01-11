@@ -9,7 +9,7 @@
 function the_search_form () { ?>
 	<form action="<?=get_bloginfo('url')?>">
 		<div class="input-group d-flex">
-			<input type="text" class="border-dark form-control vwm__search__shortened" placeholder="<?=__( 'Zoeken...', 'vmw')?>" aria-label="<?=__( 'Search...', 'vmw')?>" aria-describedby="search-submit">
+			<input type="text" class="border-dark form-control vwm__search__shortened" placeholder="<?=__( 'Zoeken...', 'vmw')?>" aria-label="<?=__( 'Search...', 'vmw')?>" aria-describedby="search-submit" id="s" name="s">
 			<div class="input-group-append">
 				<button class="btn bg-transparent border-dark border-left-0" type="submit" id="search-submit"><i class="fas fa-search"></i></button>
 			</div>
