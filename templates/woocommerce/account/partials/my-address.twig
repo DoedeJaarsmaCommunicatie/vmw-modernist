@@ -1,2 +1,10 @@
 {{ dump(customer) }}
-{{ dump(address) }}
+{{ dump(addresses) }}
+
+<div class="row">
+    {% for address in addresses %}
+        <div class="col-md-6">
+            {{ dump(address) }}
+        </div>
+    {% endfor %}
+</div>

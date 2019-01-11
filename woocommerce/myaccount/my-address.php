@@ -36,7 +36,7 @@ if( class_exists( 'Timber' ) ) {
 		), $context['customer'] );
 	}
 	
-	$context['address'] = $get_addresses;
+	$context['addresses'] = $get_addresses;
 	
 	\Timber\Timber::render('templates/woocommerce/account/partials/my-address.twig', $context);
 } else {
