@@ -132,6 +132,7 @@
 }
 
 .vmw__related__card__container.current {
+  z-index: 2;
   box-shadow: 2px 16px 9px 3px rgba(51, 51, 51, 0.1);
 }
 
