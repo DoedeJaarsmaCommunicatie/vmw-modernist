@@ -28,12 +28,12 @@ if( class_exists( 'Timber' ) ) {
 		$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
 			'billing' => __( 'Billing address', 'woocommerce' ),
 			'shipping' => __( 'Shipping address', 'woocommerce' ),
-		), $customer_id );
+		), $context['customer'] );
 		
 	} else {
 		$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
 			'billing' => __( 'Billing address', 'woocommerce' ),
-		), $customer_id );
+		), $context['customer'] );
 	}
 	
 	$context['address'] = $get_addresses;
