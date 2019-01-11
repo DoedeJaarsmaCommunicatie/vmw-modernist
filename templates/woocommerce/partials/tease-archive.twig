@@ -1,7 +1,7 @@
 <article class="product__horizontal__card border border-tertiary-light-50 p-1" data-article="{{ product.name }}">
     <figure class="product__horizontal__figure">
         <a href="{{ fn('get_permalink', post.ID) }}">
-            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }}" class="product__horizontal__image px-3">
+            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="product__horizontal__image px-3">
         </a>
     </figure>
     <section class="product__horizontal__content">

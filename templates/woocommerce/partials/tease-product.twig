@@ -19,7 +19,7 @@
     </section>
     <figure class="product__card__figure">
         <a href="{{ fn('get_permalink', post.ID) }}">
-            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }}" class="product__card__image">
+            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="product__card__image">
         </a>
     </figure>
     <section class="product__card_price">
