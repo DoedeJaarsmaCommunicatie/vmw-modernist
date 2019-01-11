@@ -2,19 +2,22 @@
   display: grid;
   grid-template-columns: 50% 50%;
 }
+
 #wizard-p-0 .woocommerce-additional-fields {
   display: none;
 }
+
 #wizard-p-0 .form-row {
   width: 100%;
   display: block;
 }
+
 #wizard-p-0 #ship-to-different-address-checkbox {
   position: initial;
   margin-left: initial;
 }
+
 #wizard-p-0 .ship-to-different-address {
-  font-size: 1rem;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=checkout__form.css.map */
