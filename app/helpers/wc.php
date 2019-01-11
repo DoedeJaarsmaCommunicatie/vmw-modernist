@@ -215,8 +215,8 @@ function the_big_shopping_cart()
         <hr>
         <?php
 	}?>
-        <a class="vmw__gradient__background__right text-white p-2" href="<?=get_permalink( wc_get_page_id( 'cart' ) );?>">Winkelwagen bekijken</a>
-        <a class="vmw__gradient__background__left text-white p-2" href="<?=get_permalink( wc_get_page_id( 'checkout' ) );?>">Direct afrekenen</a>
+        <a class="btn bg-primary text-white p-2" href="<?=get_permalink( wc_get_page_id( 'cart' ) );?>">Winkelwagen bekijken</a>
+        <a class="btn bg-primary text-white p-2" href="<?=get_permalink( wc_get_page_id( 'checkout' ) );?>">Direct afrekenen</a>
     </section>
     <?php
 }
