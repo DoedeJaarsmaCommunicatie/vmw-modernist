@@ -1,3 +1,11 @@
+.woocommerce-input-field-template,
+#wizard .actions a {
+  height: 40px;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  padding-left: 15px;
+  border-radius: 5px !important;
+}
+
 #wizard-p-0 {
   display: grid;
   grid-template-columns: 50% 50%;

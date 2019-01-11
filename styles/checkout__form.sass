@@ -1,3 +1,5 @@
+@import "templates"
+
 #wizard-p-0
   display: grid
   grid-template-columns: 50% 50%
@@ -16,3 +18,9 @@
   #ship-to-different-address
     cursor: pointer
     //font-size: 1rem
+
+
+#wizard
+  .actions
+    a
+      @extend .woocommerce-input-field-template
