@@ -59,7 +59,7 @@ add_action( 'upload_mimes', 'add_file_types_to_uploads' );
 function vmw_scripts() {
 	wp_enqueue_style( 'badubed-style', get_stylesheet_uri(), [], 201811, 'all' );
 	wp_enqueue_style( 'badubed-font', 'https://fonts.googleapis.com/css?family=Signika:300,400,700', [] );
-	wp_enqueue_style( 'vmw_general_styles', get_stylesheet_directory_uri() . '/styles/general.css', [], 201901, 'all' );
+	wp_enqueue_style( 'vmw_general_styles', get_stylesheet_directory_uri() . '/styles/general.css', [], 20190114, 'all' );
 	wp_enqueue_style( 'vmw_products', get_stylesheet_directory_uri() . '/styles/product__card.css', [], 201811, 'all' );
 	wp_enqueue_style( 'vmw_product', get_stylesheet_directory_uri() . '/styles/single__product.css', [], 201812, 'all' );
 	wp_enqueue_style( 'vmw_shopping__cart', get_stylesheet_directory_uri() . '/styles/shopping__cart.css', [], 201812, 'all' );
