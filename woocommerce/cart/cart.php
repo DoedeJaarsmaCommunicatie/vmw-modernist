@@ -193,7 +193,7 @@ do_action( 'woocommerce_before_cart' );
 		</div>
 	<?php } ?>
 	
-	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents d-none" cellspacing="0">
 		<tbody>
 		<tr>
 			<td colspan="6" class="actions">
