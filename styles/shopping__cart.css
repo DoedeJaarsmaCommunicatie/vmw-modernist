@@ -116,3 +116,27 @@
   background: var(--primary) !important;
 }
 
+.shop_table .product-remove {
+  width: 5%;
+}
+
+.shop_table .product-thumbnail {
+  width: 10%;
+}
+
+.shop_table .product-name {
+  width: 35%;
+}
+
+.shop_table .product-price {
+  width: 15%;
+}
+
+.shop_table .product-quantity {
+  width: 20%;
+}
+
+.shop_table .product-subtotal {
+  width: 15%;
+}
+
