@@ -73,6 +73,7 @@
         maxResults: 5,                         // Max. number of rendered results | (Optional)
         onSelection: feedback => {             // Action script onSelection event | (Optional)
             console.log(feedback);
+            document.querySelector('#autoComplete').value = feedback.selection
             document.querySelector('#searchform').submit()
         }
     });
