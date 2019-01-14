@@ -84,7 +84,7 @@ function vmw_scripts() {
 	}
 	
 	if (is_checkout() || is_cart()) {
-		wp_enqueue_style( 'vmw_filter_styling', get_stylesheet_directory_uri() . '/styles/checkout__form.css', [], 201901, 'all');
+		wp_enqueue_style( 'vmw_checkout_styling', get_stylesheet_directory_uri() . '/styles/checkout__form.css', [], 201901, 'all');
 	}
 	
 	wp_localize_script( 'ajax_add_to_cart', 'vmw_ajax_object', [ 'ajax_url' => admin_url( 'admin-ajax.php' ) ]);
