@@ -1,0 +1,51 @@
+@import "helpers/all"
+
+.current-menu-item
+  color: var(--primary) !important
+
+.has-border-radius
+ +border_radius
+
+.mt-2-my-images
+  & img
+    margin-top: 1rem
+
+
+.woocommerce-input-wrapper
+  & input
+    @extend .woocommerce-input-field-template
+
+.woocommerce-Input
+  @extend .woocommerce-input-field-template
+
+.woocommerce-address-fields__field-wrapper
+  & .form-row
+    flex-direction: column
+
+#zoekresultaten
+  position: absolute
+  top: 100%
+  z-index: 4
+
+.autoComplete_result
+  margin: 0 !important
+
+.woocommerce-ordering
+  &::before
+    content: 'Sorteer op:'
+
+.woocommerce-cart
+  table.cart
+      img
+        width: auto
+        height: 80px
+
+.note-text
+  font-size: 1rem !important
+  color: var(--primary) !important
+
+.remove-filter
+  &::before, &::after
+    background: var(--primary) !important
+    width: 100% !important
+    height: 2px !important

@@ -7,12 +7,13 @@
  */
 
 function the_search_form () { ?>
-	<form action="<?=get_bloginfo('url')?>">
-		<div class="input-group d-flex">
-			<input type="text" class="border-dark form-control vwm__search__shortened" placeholder="<?=__( 'Zoeken...', 'vmw')?>" aria-label="<?=__( 'Search...', 'vmw')?>" aria-describedby="search-submit">
-			<div class="input-group-append">
-				<button class="btn bg-transparent border-dark border-left-0" type="submit" id="search-submit"><i class="fas fa-search"></i></button>
-			</div>
+	<form action="<?=get_bloginfo('url')?>" id="searchform">
+		<div class="input-group d-flex position-relative">
+			<input type="text" class="border-dark form-control vwm__search__shortened" placeholder="<?=__( 'Zoeken...', 'vmw')?>" aria-label="<?=__( 'Search...', 'vmw')?>" aria-describedby="search-submit" id="autoComplete" name="s" tabindex="1" autocomplete="off">
+            <input type="hidden" name="post_type" id="post_type" value="product">
+<!--			<div class="input-group-append">-->
+<!--				<button class="btn bg-transparent border-dark border-left-0" type="submit" id="search-submit"><i class="fas fa-search"></i></button>-->
+<!--			</div>-->
 		</div>
 	</form>
 <?php

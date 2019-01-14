@@ -29,8 +29,8 @@ function the_wc_shopping_cart($icon = 'shopping-cart') {
 function the_wc_single_stock( $product_id ) {
 	$product = wc_get_product( $product_id );
 	if( $product->is_in_stock() ) : ?>
-    <section class="vmw__single__product__shipping">
-        <i class="fas fa-check-circle fa-2x text-success"></i> <span><strong>Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
+    <section class="vmw__single__product__shipping mt-lg-1">
+        <i class="fas fa-check-circle text-success mt-1"></i> <span><strong class="text-success">Op voorraad:</strong> Binnen 2-4 werkdagen in huis</span>
     </section>
 	<?php
 	endif;
@@ -45,10 +45,12 @@ function the_wc_single_vendor( $product_id ) {
 
 function the_wc_usp() {
     ?>
-    <section class="vmw__single__product__usp my-2">
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Gratis verzending > € 70,-
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Per fles te bestellen
-        <i class="fas fa-check-circle text-primary fa-2x"></i> Bestellen en betalen via vindmijnwijn.nl
+    <section class="vmw__single__product__usp">
+        <ul class="p-0 m-2" style="list-style-type: circle; width: 200px;">
+            <li>Gratis verzending > € 70,-</li>
+            <li>Per fles te bestellen</li>
+            <li>Bestellen en betalen via vindmijnwijn.nl</li>
+        </ul>
     </section>
     <?php
 }
@@ -81,11 +83,11 @@ function the_big_shopping_cart()
 	
 	?>
     <section class="shopping__cart__container js-target-shopping-cart p-3 border border-tertiary-light-50">
-        <header class="vmw__shopping__cart__header js-shopping-cart-close">
+        <header class="vmw__shopping__cart__header js-shopping-cart-close d-flex w-100">
             <h3>
                 Winkelmandje &euro; <?=$cart_totals['total']?>
             </h3>
-            <span>
+            <span class="ml-auto" style="cursor: pointer;">
                 <i class="fas fa-times fa-2x"></i>
             </span>
         </header>
@@ -213,8 +215,10 @@ function the_big_shopping_cart()
         <hr>
         <?php
 	}?>
-        <a class="vmw__gradient__background__right text-white p-2" href="<?=get_permalink( wc_get_page_id( 'cart' ) );?>">Winkelwagen bekijken</a>
-        <a class="vmw__gradient__background__left text-white p-2" href="<?=get_permalink( wc_get_page_id( 'checkout' ) );?>">Direct afrekenen</a>
+        <footer class="shopping__cart__footer">
+            <a class="btn bg-primary text-white p-2" href="<?=get_permalink( wc_get_page_id( 'cart' ) );?>">Winkelwagen bekijken</a>
+            <a class="btn bg-primary text-white p-2" href="<?=get_permalink( wc_get_page_id( 'checkout' ) );?>">Direct afrekenen</a>
+        </footer>
     </section>
     <?php
 }

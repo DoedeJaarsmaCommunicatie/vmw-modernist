@@ -1,28 +1,51 @@
 {% do action('vmw_before_single_attributes') %}
-
-<table>
-    <tr>
-        <th>Land</th>
-        <td>
-            {{ product.get_attribute( 'pa_land' ) }}
-        </td>
-    </tr>
-    <tr>
-        <th>Druif</th>
-        <td>
-            {{ product.get_attribute( 'pa_druif' ) }}
-        </td>
-    </tr>
-    <tr>
-        <th>Jaargang</th>
-        <td>
-            {{ product.get_attribute( 'pa_jaar' ) }}
-        </td>
-    </tr>
-    <tr>
-        <th>Smaak</th>
-        <td>
-            {{ product.get_attribute( 'pa_smaak' ) }}
-        </td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col-md-6 pr-md-0">
+        <table class="w-100">
+            <tr class="border-bottom">
+                <th class="p-1">
+                    <figure>
+                        <img class="icon__image__attributes" src="{{ fn('get_field', 'iconen', 'option')['icoon_land']['url'] }}" alt="{{ curr_prod.get_attribute('pa_land') }}" />
+                    </figure>
+                </th>
+                <td class="w-75">
+                    {{ product.get_attribute( 'pa_land' ) }}
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <th class="p-1">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
+                    </figure>
+                </th>
+                <td class="w-75">
+                    {{ product.get_attribute( 'pa_druif' ) }}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-6 pl-md-0">
+        <table class="w-100">
+            <tr class="border-bottom">
+                <th class="p-1">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_jaar']['url'] }}" alt="{{ curr_prod.get_attribute('pa_jaar') }}" />
+                    </figure>
+                </th>
+                <td itemprop="releaseDate" class="w-75">
+                    {{ product.get_attribute( 'pa_jaar' ) }}
+                </td>
+            </tr>
+            <tr class="border-bottom">
+                <th class="p-1">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_smaak']['url'] }}" alt="{{ curr_prod.get_attribute('pa_smaak') }}" />
+                    </figure>
+                </th>
+                <td class="w-75">
+                    {{ product.get_attribute( 'pa_smaak' ) }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -6,10 +6,21 @@
     <title>{{ wp_title }}</title>
 {% endblock %}
 {{ function('wp_head') }}
+{#<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TarekRaafat/autoComplete.js@3.2.2/dist/css/autoComplete.min.css">#}
+{#<script src="https://cdn.jsdelivr.net/gh/TarekRaafat/autoComplete.js@3.2.2/dist/js/autoComplete.min.js"></script>#}
 {% block head %}
     {# It is possible to overwrite this block and add custom code to the head #}
 {% endblock %}
-
+{#<style>#}
+    {##zoekresultaten {#}
+        {#position: absolute;#}
+        {#top: 100%;#}
+        {#z-index: 4;#}
+    {#}#}
+    {#.autoComplete_result {#}
+        {#margin: 0 !important;#}
+    {#}#}
+{#</style>#}
 </head> {# Opened in base-head.twig #}
 
 {# Base body. Overwrite where needed. #}
@@ -27,9 +38,11 @@
         {% endblock %}
     </header>
     <main  id="content_{{ fn('get_queried_object_id') }}" {{ fn('post_class', 'main') }} data-template="base.twig">
-        {% block content %}
-            <!-- This will be overwritten by the content block in the inheriting .twig file -->
-        {% endblock %}
+        <div id="app">
+            {% block content %}
+                <!-- This will be overwritten by the content block in the inheriting .twig file -->
+            {% endblock %}
+        </div>
     </main>
     <footer id="footer_{{ function('get_queried_object_id') }}" {{ fn('footer_class') }} data-template="base.twig">
         {% block footer %}

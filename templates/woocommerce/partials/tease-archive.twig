@@ -1,0 +1,24 @@
+<article class="product__horizontal__card border border-tertiary-light-50 p-1" data-article="{{ product.get_name }}">
+    <figure class="product__horizontal__figure">
+        <a href="{{ fn('get_permalink', post.ID) }}">
+            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="product__horizontal__image px-3">
+        </a>
+    </figure>
+    <section class="product__horizontal__content">
+        <h3>
+            <a href="{{ fn('get_permalink', post.ID) }}">
+                {{ post.title }}
+            </a>
+        </h3>
+        <p class="vmw__recently__visited__text">
+            {{ post.content|excerpt(35) }}
+        </p>
+        {% include 'templates/woocommerce/partials/single-attributes.twig' %}
+    </section>
+    <aside class="product__horizontal__buy p-md-3">
+        <p class="text-primary product__horizontal__price text-center text-sm-left">
+            &euro; {{ product.get_price| number_format(2, ',', '.') }}
+        </p>
+        {{ post.ID|apply_filters('product_form_add_to_cart') }}
+    </aside>
+</article>

@@ -1,17 +1,27 @@
-<article class="vmw__recently__visited__container border border-tertiary-light-50 p-1">
-    <figure class="vmw__recently__visited__figure">
-        <a href="{{ fn('get_permalink', recent.ID) }}">
-            <img src="{{ fn('get_the_post_thumbnail_url', recent.ID, 'medium') }}" alt="{{ recent.title }}" class="vmw__recently__visited__image">
+<article class="vmw__recently__visited__container p-1 text-center d-flex flex-column">
+    <h5 class="product__card__title">
+        <a href="{{ fn('get_permalink', post.ID) }}" class="text-dark">
+            {{ post.title }}
+        </a>
+    </h5>
+    <div class="product__card__border__title mb-2"></div>
+    <section>
+        <p class="p-0 m-0">
+            {{ product.get_attribute('pa_jaar') }} | {{ product.get_attribute('pa_land') }}
+        </p>
+        <div class="p-0 m-0" style="min-height: 3.2rem;">
+            <figure class="d-inline">
+                <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ curr_prod.get_attribute('pa_druif') }}" />
+            </figure>
+            {{ product.get_attribute('pa_druif') }}
+        </div>
+    </section>
+    <figure class="product__card__figure">
+        <a href="{{ fn('get_permalink', post.ID) }}">
+            <img src="{{ fn('get_the_post_thumbnail_url', post.ID, 'medium') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="product__card__image">
         </a>
     </figure>
-    <section class="vmw__recently__visited__content">
-        <h3>
-            <a href="{{ fn('get_permalink', recent.ID) }}">
-                {{ recent.title }}
-            </a>
-        </h3>
-        <p class="vmw__recently__visited__text">
-            {{ recent.content|excerpt(25) }}
-        </p>
+    <section class="product__card_price">
+        &euro; {{ product.get_price| number_format(2, ',', '.') }}
     </section>
 </article>

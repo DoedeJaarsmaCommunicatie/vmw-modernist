@@ -1,55 +1,69 @@
-{#{{ dump(current) }}#}
 {% set cur_prod = fn('wc_get_product', current.ID) %}
-<article class="col-lg-3 col-md-6 mb-lg-0 mb-3">
-    <div class="card mb-5 mb-lg-0 h-100 vmw__related__card__container">
+<article class="col-lg-3 col-md-6 mb-lg-0 mb-3 p-lg-0 vmw__single__related__card {{ (current.ID == fn('get_queried_object_id'))? ' d-none d-sm-block': '' }}">
+    <div class="text-primary text-center">
+        <h6 class="vmw__related__card_title m-0">
+            <a href="{{ fn('get_permalink', current.ID) }}" class="text-dark">
+                {{ current.title }}
+            </a>
+        </h6>
+    </div>
+    <div class="card mb-3 mb-lg-0 h-100 vmw__related__card__container border-0{{ (current.ID == fn('get_queried_object_id'))? ' current': '' }}">
         <div class="card-body d-flex flex-column">
             <figure class="text-center">
                 <a href="{{ fn('get_permalink', current.ID) }}">
-                    <img src="{{ current.thumbnail.src('medium') }}" alt="{{ current.title }}" class="vmw__related__image">
+                    <img src="{{ current.thumbnail.src('medium') }}" alt="{{ post.title }} | {{ cur_prod.get_attribute('pa_land') }} | gemaakt van de druif: {{ cur_prod.get_attribute('pa_druif') }}" class="vmw__related__image">
                 </a>
             </figure>
-            <div class="card-title text-primary text-center text-uppercase">
-                <h5 class="vmw__related__card_title pt-1">
-                    <a href="{{ fn('get_permalink', current.ID) }}">
-                        {{ current.title }}
-                    </a>
-                </h5>
-                <h5>
-                    &euro; {{ current._price| round(2, 'ceil') | replace({'.': ','}) }}
-                </h5>
-            </div>
             <div class="card-content">
-                <hr>
-                <ul class="vmw__related__products__list">
-                    <li>
-                        <i class="fas fa-globe-europe"></i> {{ cur_prod.get_attribute('pa_land') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marked-alt"></i> {{ cur_prod.get_attribute('pa_streek') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-wine-glass-alt"></i> {{ cur_prod.get_attribute('pa_smaak') }}
-                    </li>
-                    <li>
-                        <i class="fas fa-tint"></i> {{ cur_prod.get_attribute('pa_druif') }}
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer-vmw text-center mt-auto">
-                <hr>
-                {#{% if ( fn('get_queried_object_id') === current.ID ) %}#}
-                    {#Deze heb je nu#}
-                {#{% endif %}#}
-                {% if current.ID == fn('get_queried_object_id') %}
-                    <span class="bg-tertiary p-1 d-inline-block text-white">
-                        {{ __('Selecteer', 'vmw') }}
+                <div class="vmw__related__products__list">
+                    <span class="vmw__related__products__list__land vmw__related__products__list__item border-bottom">
+                    <figure>
+                        <img class="icon__image__attributes" src="{{ fn('get_field', 'iconen', 'option')['icoon_land']['url'] }}" alt="{{ current.get_attribute('pa_land') }}" />
+                    </figure>
+                        {{ cur_prod.get_attribute('pa_land') }}
                     </span>
-                {% else %}
-                <a href="{{ fn('get_permalink', current.ID) }}" class="vmw__gradient__background__right p-1 d-inline-block text-white">
-                    {{ __('Selecteer', 'vmw') }}
-                </a>
-                {% endif %}
+                    <span class="vmw__related__products__list__jaar vmw__related__products__list__item border-left border-bottom">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_jaar']['url'] }}" alt="{{ current.get_attribute('pa_jaar') }}" />
+                    </figure>
+                        {{ cur_prod.get_attribute('pa_jaar') }}
+                    </span>
+                    <span class="vmw__related__products__list__streek vmw__related__products__list__item border-bottom">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_streek']['url'] }}" alt="{{ current.get_attribute('pa_streek') }}" />
+                    </figure>
+                        {{ cur_prod.get_attribute('pa_streek') }}
+                    </span>
+                    <span class="vmw__related__products__list__druif vmw__related__products__list__item border-bottom align-items-center">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_druif']['url'] }}" alt="{{ current.get_attribute('pa_druif') }}" />
+                    </figure>
+                        {{ cur_prod.get_attribute('pa_druif') }}
+                    </span>
+                    <span class="vmw__related__products__list__smaak vmw__related__products__list__item border-bottom align-items-center">
+                    <figure>
+                        <img class="icon__image__attributes"  src="{{ fn('get_field', 'iconen', 'option')['icoon_smaak']['url'] }}" alt="{{ current.get_attribute('pa_smaak') }}" />
+                    </figure>
+                        {{ cur_prod.get_attribute('pa_smaak') }}
+                    </span>
+                </div>
             </div>
+            <strong class="vmw__related__products__price text-center">
+                <span>&euro;</span> {{ current._price| number_format(2, ',', '.') }}
+            </strong>
+                {% if current.ID == fn('get_queried_object_id') %}
+                    <div class="card-footer-vmw text-center mt-3">
+                        <span class="bg-tertiary p-1 d-inline-block text-white has-border-radius">
+                            {{ __('Huidige keuze', 'vmw') }}
+                        </span>
+                    </div>
+                {% else %}
+                    <div class="card-footer-vmw text-center mt-1">
+                            <a href="{{ fn('get_permalink', current.ID) }}" class="bg-primary p-1 d-inline-block text-white has-border-radius">
+                                {{ __('Selecteer', 'vmw') }}
+                            </a>
+                    </div>
+                {% endif %}
         </div>
     </div>
 </article>

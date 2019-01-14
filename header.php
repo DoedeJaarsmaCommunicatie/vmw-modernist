@@ -8,3 +8,16 @@
 
 $GLOBALS['timberContext'] = Timber::get_context();
 ob_start();
+
+if( isset($_GET['product-price'])) {
+	global $wp_query;
+	$wp_query->set('meta_query', [
+		[
+			'key'     => '_regular_price',
+			'value'   => explode( '-', $_GET['product-price']),
+			'compare' => 'BETWEEN',
+			'type'  => 'NUMERIC'
+		]
+	]);
+}
+

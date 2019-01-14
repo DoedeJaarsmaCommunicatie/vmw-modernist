@@ -1,4 +1,5 @@
-@import "functions"
+@import "helpers/all"
+// @deprecated
 .product__card
   display:  flex
   flex-direction:  column
@@ -27,11 +28,12 @@
 .product__horizontal__card
   display: grid
   grid-template-areas: "img main aside"
-
-  @media screen and (max-width: 414px)
-    grid-template-areas: "img aside" "main aside"
-
+  grid-template-columns: 20% 50% 30%
   +hover_shadow
+
+  +mobile_only
+    grid-template-areas: "img aside" "main main"
+    grid-template-columns: 1.5fr 1fr
 
   .product__horizontal__image
     grid-area: img
@@ -44,7 +46,7 @@
   .product__horizontal__buy
     grid-area: aside
     font-size: 2rem
-    @media screen and (max-width: 414px)
+    +mobile_only
       .product__horizontal__add_to_cart
         flex-wrap: wrap
         #quantity
@@ -56,6 +58,13 @@
 
   .btn-plusle-minum
     +border_radius
+    &:first-of-type
+      border-bottom-right-radius: 0 !important
+      border-top-right-radius: 0 !important
+
+    &:last-of-type
+      border-top-left-radius: 0 !important
+      border-bottom-left-radius: 0 !important
 
   .btn-order
     +border_radius
@@ -65,9 +74,25 @@
     border-bottom: 1px solid #a7a7a7
     border-top: 1px solid #a7a7a7
 
+  input[type="numeric"]
+    width: 50px
+
 .vmw__recently__visited__container
   display: grid
   grid-template-columns: 30% auto
+  &:hover
+    +box_shadow(rgb(255,255,255), 0.2)
+    //box-shadow: rgba(255,255,255,0.2)
+
 
 .vmw__product__attributes
   +normalize_list
+
+.product__card__border__title
+  +product_title_bar
+  height: 1px
+
+.product__card__title
+  //+product_title_bar
+  height: 3rem
+  overflow-y: hidden

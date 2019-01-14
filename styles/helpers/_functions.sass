@@ -1,0 +1,53 @@
+@import "breakpoints"
+
+=light_box_shadow
+  -webkit-box-shadow: 0 0 8px 3px rgba( #f4f4f4, 0.6)
+  -moz-box-shadow: 0 0 8px 3px rgba( #f4f4f4, 0.6)
+  box-shadow: 0 0 8px 3px rgba( #f4f4f4, 0.6)
+
+=box_shadow($color, $opacity)
+  -webkit-box-shadow: 0 0 8px 3px rgba( $color, $opacity)
+  -moz-box-shadow: 0 0 8px 3px rgba( $color, $opacity)
+  box-shadow: 0 0 8px 3px rgba( $color, $opacity)
+
+=hover_shadow
+  &:hover
+    +light_box_shadow
+
+=border_radius
+  -webkit-border-radius: 5px !important
+  -moz-border-radius: 5px !important
+  border-radius: 5px !important
+
+=set_border_radius($pix)
+  -webkit-border-radius: $pix !important
+  -moz-border-radius: $pix !important
+  border-radius: $pix !important
+
+=remove_border_radius
+  -webkit-border-radius: 0 !important
+  -moz-border-radius: 0 !important
+  border-radius: 0 !important
+
+=normalize_list
+  list-style: none
+  padding: 0
+
+=product_title_bar
+  position: relative
+  height: 2.5rem
+  overflow-y: hidden
+  
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    height: 1px
+    background: var(--primary)
+    width: 150px
+
+=hide_mobile
+  +mobile_only
+    display: none

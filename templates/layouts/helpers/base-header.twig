@@ -1,11 +1,12 @@
 {% include 'templates/layouts/helpers/header/header-topper.twig' %}
 
 <div class="site-branding container py-3" data-template="helpers.base-header.twig">
-    <section class="d-flex">
+    <section class="d-flex align-items-center">
         <figure>
             {{ fn('the_custom_logo') }}
         </figure>
-        <aside class="ml-auto d-none d-lg-inline-block">
+        {% include 'templates/layouts/helpers/header/header-reviews.twig' %}
+        <aside class="d-none d-lg-inline-block ml-md-1">
             {{  fn('the_search_form') }}
         </aside>
         <aside class="ml-auto d-inline-block d-lg-none fa-2x color-tertiary-dark-10">

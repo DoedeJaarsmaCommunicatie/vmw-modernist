@@ -31,7 +31,7 @@ if ( is_singular( 'product' ) ) {
 	}
 	$context['comments']    = $cmt;
 // Get related products
-	$related_limit               =  3;
+	$related_limit               =  2;
 	$related_ids                 =  wc_get_related_products( $context['product']->get_id(), $related_limit );
 	$context['related_products'] =  Timber::get_posts( $related_ids );
 	
@@ -45,7 +45,6 @@ if ( is_singular( 'product' ) ) {
 	
 	Timber::render( 'templates/woocommerce/single-product.twig', $context );
 } else {
-	
 	$posts = Timber::get_posts();
 	$context['products'] = $posts;
 	

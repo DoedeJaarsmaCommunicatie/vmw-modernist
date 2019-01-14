@@ -3,73 +3,62 @@
 {% block content %}
 
     {% do action('woocommerce_before_single_product') %}
-    <meta itemprop="url" content="{{ post.link }}" />
+    <article itemscope itemtype="http://schema.org/Product" class="single-product-details vmw__single__product container pt-3 {{ post.class }}">
+        <meta itemprop="url" content="{{ post.link }}" />
+        <meta itemprop="category" content="{{ product.category }}">
+        <meta itemprop="sku" content="{{ product.SKU }}">
 
-    <article itemscope itemtype="http://schema.org/Product" class="single-product-details vmw__single__product container {{ post.class }}">
-        <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-            <h1 class="vmw__single__product__header__title" id="single_product_title_{{ post.id }}">
-                {{ post.title }}
-            </h1>
-        </header>
-        <aside class="vmw__single__product__aside border border-tertiary-light-50 p-3">
+        <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
-                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }}" class="vmw__single__product__image" />
+                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="vmw__single__product__image" itemprop="image" />
             </figure>
             {% do action('vmw_after_single_product_image') %}
         </aside>
         <main class="vmw__single__product__main">
+            <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
+                <h1 class="vmw__single__product__header__title mb-0" id="single_product_title_{{ post.id }}" itemprop="name">
+                    {{ post.title }}
+                </h1>
+                <p>{{ __('Verkoop door:', 'vmw') }} <a href="{{ fn('get_term_link', vendor.term_id) }}" class="text-primary">{{ vendor.name }}</a></p>
+            </header>
             {% do action('vmw_before_single_product_summary') %}
             <div class="summary entry-summary">
-                {#{% do action('woocommerce_single_product_summary') %}#}
-                {{ post.content }}
+                <span itemprop="description">
+                    {{ post.content }}
+                </span>
                 {% include ["templates/woocommerce/partials/single-attributes.twig"] %}
             </div>
             {% do action('vmw_after_single_product_summary') %}
         </main>
         {# This includes the right sidebar #}
         {% include ["templates/woocommerce/partials/single-sidebar.twig"] with { product: product } %}
-        <section class="vmw__single__product__related my-3">
-            <h4>Alternatieven</h4>
-            <div class="row">
+        <section class="vmw__single__product__related text-center " >
+            <h4 class="my-3">{{ __('Alternatieven', 'vmw' ) }}</h4>
+            <div class="row justify-content-center alternatives_background align-items-start" data-background="{{ fn('get_field', 'achtergrond_alternatieven', 'option')['url'] }}">
                 {% include "templates/woocommerce/partials/single-related.twig" with { current: post } %}
                 {% for prod in related_products %}
                     {% include "templates/woocommerce/partials/single-related.twig" with { current: prod } %}
                 {% endfor %}
             </div>
         </section>
-        <section class="vmw__single__product__reviews">
-            <h4>{{ post.get_comment_count() }} Review(s)</h4>
-            {% if (post.get_comment_count() > 0) %}
-                {% for cmt in comments %}
-                    {% include "templates/woocommerce/partials/single-review.twig" with { comment:cmt } %}
-                {% endfor %}
-            {% elseif fn('is_verified_buyer') %}
-                {# Include templates/woocommerce/review/review-form.twig #}
-            {% endif %}
-        </section>
-        <section class="vmw__single__product__cards">
+        <section class="vmw__single__product__cards my-3">
             <!-- Current vendor -->
-            <h3>
-                De wijnwinkel
-            </h3>
             {% include ["templates/woocommerce/partials/tease-vendor.twig"] %}
-            <!-- Recently visited -->
-            <h3>
-                Recent bezocht
-            </h3>
-            {% include ["templates/woocommerce/partials/tease-product.twig"] %}
         </section>
-        <section class="vmw__single__product__foundit my-2">
-            <h3>
-                Ik heb 'm gevonden
-            </h3>
-            {{ post.ID|apply_filters('horizontal_product_card_filter') }}
-        </section>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org", "@type": "Offer", "@id": "{{ post.link }}", "price": "{{ product.price }}", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"
+            }
+        </script>
     </article>
-
-    {#{% include ["templates/woocommerce/partials/tease-product.twig"] with { products: related_products } %}#}
-
     {% do action('woocommerce_after_single_product') %}
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let el = document.querySelector('[data-background]')
+            el.style.backgroundImage = `url( ${el.dataset.background}`
+        })
+    </script>
 {% endblock  %}

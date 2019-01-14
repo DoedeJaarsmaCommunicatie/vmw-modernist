@@ -1,0 +1,12 @@
+{
+    "/js/search_form.webpack.js": "/js/search_form.webpack.js",
+    "/vue/vue.webpack.js": "/vue/vue.webpack.js",
+    "/styles/checkout__form.css": "/styles/checkout__form.css",
+    "/styles/general.css": "/styles/general.css",
+    "/styles/product__card.css": "/styles/product__card.css",
+    "/styles/product__filter.css": "/styles/product__filter.css",
+    "/styles/related__card.css": "/styles/related__card.css",
+    "/styles/shopping__cart.css": "/styles/shopping__cart.css",
+    "/styles/single__product.css": "/styles/single__product.css",
+    "/styles/vendor__card.css": "/styles/vendor__card.css"
+}
