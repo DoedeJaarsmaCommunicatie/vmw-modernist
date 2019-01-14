@@ -32,3 +32,7 @@ class PlusMinus {
 document.addEventListener('DOMContentLoaded', () => {
     new PlusMinus()
 })
+
+document.addEventListener('blur', () => {
+    new PlusMinus()
+})
