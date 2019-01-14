@@ -35,6 +35,8 @@ class PlusMinus {
                 }
                 else if (mutation.type == 'attributes') {
                     console.log('The ' + mutation.attributeName + ' attribute was modified.');
+                } else if( mutation.type == 'subtree') {
+                    console.log( mutation )
                 }
             }
         })
