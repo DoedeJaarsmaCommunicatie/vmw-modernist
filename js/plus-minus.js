@@ -8,6 +8,8 @@ class PlusMinus {
         document.querySelectorAll('.js-make-me-less').forEach( el => {
             this.addButtonListeners( el.parentElement )
         })
+
+        this.watchForChanges()
     }
 
     addButtonListeners( form ) {
@@ -24,8 +26,25 @@ class PlusMinus {
             input.value++
         })
     }
+
+    watchForChanges() {
+        let observer = new MutationObserver((mutationsList, observer) => {
+            for( let mutation of mutationsList) {
+                if (mutation.type == 'childList') {
+                    console.log('A child node has been added or removed.');
+                }
+                else if (mutation.type == 'attributes') {
+                    console.log('The ' + mutation.attributeName + ' attribute was modified.');
+                }
+            }
+        })
+
+        observer.observe(document.querySelector('.products'), { attributes: true, childList: true, subtree: true })
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     new PlusMinus()
 })
+
+
