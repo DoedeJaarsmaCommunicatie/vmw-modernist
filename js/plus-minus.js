@@ -38,6 +38,8 @@ class PlusMinus {
                 } else if( mutation.type == 'subtree') {
                     console.log( mutation )
                 }
+
+                console.log(mutation)
             }
         })
 
