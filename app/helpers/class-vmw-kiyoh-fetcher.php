@@ -13,7 +13,7 @@ class VmwKiyohFetcher
 	
 	public function fetch()
 	{
-		if( ! get_transient('vmw_kiyoh_fetch') )
+		if( false === get_transient('vmw_kiyoh_fetch') )
 		{
 			$this->kiyoh = new \JKetelaar\Kiyoh\Kiyoh( 'eXenetp25gPxyHYQAmg4f9ByeKS4UW2pMEYqsrQ8AVMfZVMpWg', 22643);
 			
