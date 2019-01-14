@@ -12,7 +12,7 @@ class PlusMinus {
 
     // live binding helper
     live(selector, event, callback, context) {
-        addEvent(context || document, event, function(e) {
+        this.addEvent(context || document, event, function(e) {
             var found, el = e.target || e.srcElement;
             while (el && !(found = el.id == selector)) el = el.parentElement;
             if (found) callback.call(el, e);
