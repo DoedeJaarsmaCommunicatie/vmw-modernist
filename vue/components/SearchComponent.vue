@@ -101,15 +101,15 @@
                 let pUrl = `${this.url}?${params.toString()}`
                 window.location.href = pUrl
             },
-            changeCategoryOpen: function () {
+            changeCategoryOpen: function (event) {
                 event.target.classList.toggle('up')
                 document.querySelector('.filter-category').classList.toggle('active')
             },
-            changeLandOpen: function () {
+            changeLandOpen: function (event) {
                 event.target.classList.toggle('up')
                 document.querySelector('.filter-land').classList.toggle('active')
             },
-            changePrijsOpen: function () {
+            changePrijsOpen: function (event) {
                 event.target.classList.toggle('up')
                 document.querySelector('.filter-price').classList.toggle('active')
             },
