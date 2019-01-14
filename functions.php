@@ -29,6 +29,7 @@ array_map(
 		'helpers/class-vmw-kiyoh-fetcher',
 
 		'filters/products',
+		'filters/wc',
 		
 		'shortcodes/vendors',
 		'shortcodes/search',
