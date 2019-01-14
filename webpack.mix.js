@@ -15,7 +15,6 @@ mix
     .js('vue/app.js', 'vue/vue.webpack.js')
     .js('js/search_form.js', 'js/search_form.webpack.js')
 
-
 mix
     .sass('styles/checkout__form.sass', 'styles/checkout__form.css')
     .sass('styles/general.sass', 'styles/general.css')

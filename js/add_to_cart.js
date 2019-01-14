@@ -5,6 +5,8 @@ class CartAdder {
 
         if(this._add_to_cart_forms)
             this.main()
+
+        document.addEventListener('DOMContentLoaded', this.addObserver)
     }
 
     setters() {
@@ -14,9 +16,37 @@ class CartAdder {
     main() {
         this._add_to_cart_forms.forEach( form => {
             CartAdder.stopDefaultAction(form)
-            new AddForm( form )
+            if( !form.getAttribute('data-event')) {
+                new AddForm( form )
+            }
+        })
+    }
+
+
+    addObserver() {
+        let observer = new MutationObserver((mutations, observer) => {
+            for (let mutation of mutations) {
+                if (mutation.type == 'childList' &&
+                    mutation.target == document.querySelector('body') &&
+                    mutation.removedNodes.length > 0
+                ) {
+
+                    if (mutation.removedNodes[0].classList.contains('blockUI')) {
+                        console.log('Adding listeners')
+                        document.querySelectorAll(`form[data-action="product_add_to_cart"]`).forEach( el => {
+                            CartAdder.stopDefaultAction( el )
+                            if( !el.getAttribute('data-event')) {
+                                new AddForm( el )
+                            }
+                        })
+                    }
+
+                }
+            }
         })
 
+
+        observer.observe(document, { childList: true, subtree: true })
     }
 
     static stopDefaultAction( form ) {
@@ -29,6 +59,8 @@ class AddForm {
     constructor( form ) {
         this.form = form
         this.submit_button = this.formSelect( 'input[type="submit"]' )
+
+        this.form.setAttribute('data-event', 'on')
 
         this.submit_button.addEventListener('click', () => {
             this.quantity = this.formSelect('#quantity').value
