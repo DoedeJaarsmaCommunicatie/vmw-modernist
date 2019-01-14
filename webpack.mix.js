@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix
     .js('vue/app.js', 'vue/vue.webpack.js')
+    .js('js/search_form.js', 'js/search_form.webpack.js')
 
 
 mix

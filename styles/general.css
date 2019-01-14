@@ -27,3 +27,13 @@
   flex-direction: column;
 }
 
+#zoekresultaten {
+  position: absolute;
+  top: 100%;
+  z-index: 4;
+}
+
+.autoComplete_result {
+  margin: 0 !important;
+}
+

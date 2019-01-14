@@ -1,4 +1,5 @@
 {
+    "/js/search_form.webpack.js": "/js/search_form.webpack.js",
     "/vue/vue.webpack.js": "/vue/vue.webpack.js",
     "/styles/checkout__form.css": "/styles/checkout__form.css",
     "/styles/general.css": "/styles/general.css",
