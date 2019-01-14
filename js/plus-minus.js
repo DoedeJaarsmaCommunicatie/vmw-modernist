@@ -13,22 +13,23 @@ class PlusMinus {
     addButtonListeners( form ) {
         let input = form.querySelector('#quantity')
 
-        form.querySelector('.js-make-me-less').unbind('click')
-        form.querySelector('.js-make-me-more').unbind('click')
+        form.querySelector('.js-make-me-less').removeEventListener('click', this.makeItLess(input))
+        form.querySelector('.js-make-me-more').removeEventListener('click', this.makeItMore(input))
 
-        form.querySelector('.js-make-me-less').addEventListener('click', (event) => {
-            if( parseInt(input.value) <= 1) {
-                return;
-            }
-            input.value--
-        })
+        form.querySelector('.js-make-me-less').addEventListener('click', this.makeItLess(input))
 
-        form.querySelector('.js-make-me-more').addEventListener('click', (event) => {
-            // if( parseInt(input.value) <= 1) {
-            //     return;
-            // }
-            input.value++
-        })
+        form.querySelector('.js-make-me-more').addEventListener('click', this.makeItMore(input))
+    }
+
+    makeItLess(input) {
+        if( parseInt(input.value) <= 1) {
+            return;
+        }
+        input.value--
+    }
+
+    makeItMore(input) {
+        input.value++
     }
 }
 
