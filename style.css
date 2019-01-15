@@ -4,75 +4,104 @@ Description: A theme made for Vindmijnwijn.nl
 Template: badubed
 */
 body {
-    font-weight: 300 !important;
+	font-weight: 300 !important;
 }
 
 .vmw__gradient__background__right {
-    background: var(--primary); /* Old browsers */
-    background: -moz-linear-gradient(left, var(--primary), var(--secondary)); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--primary), var(--secondary)); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--primary), var(--secondary)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--primary), endColorstr=var(--secondary),GradientType=0 ); /* IE6-9 */
+	background: var(--primary); /* Old browsers */
+	background: -moz-linear-gradient(
+		left,
+		var(--primary),
+		var(--secondary)
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		var(--primary),
+		var(--secondary)
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		var(--primary),
+		var(--secondary)
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--primary), endColorstr=var(--secondary),GradientType=0 ); /* IE6-9 */
 }
 
 .vmw__gradient__background__left {
-    background: var(--primary); /* Old browsers */
-    background: -moz-linear-gradient(right, var(--primary), var(--secondary)); /* FF3.6-15 */
-    background: -webkit-linear-gradient(right, var(--primary), var(--secondary)); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to left, var(--primary), var(--secondary)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--primary), endColorstr=var(--secondary),GradientType=0 ); /* IE6-9 */
+	background: var(--primary); /* Old browsers */
+	background: -moz-linear-gradient(
+		right,
+		var(--primary),
+		var(--secondary)
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		right,
+		var(--primary),
+		var(--secondary)
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to left,
+		var(--primary),
+		var(--secondary)
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--primary), endColorstr=var(--secondary),GradientType=0 ); /* IE6-9 */
 }
 
 .custom-logo-link > .custom-logo {
-    height: 55px;
-    width: 335px;
+	height: 55px;
+	width: 335px;
 }
 
 .vwm__search__shortened {
-    width: calc( 100% - 43px ) !important;
-    height: 45px;
+	width: calc(100% - 43px) !important;
+	height: 45px;
 }
 
 .vmw__navigation__parent {
-    font-size: 1.5rem;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+	font-size: 1.5rem;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .vmw__navigation__parent:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .vmw__mega__menu {
-    top: 100%;
-    left: 0;
-    display: flex;
-    border: 4px solid #f4f4f4;
-    border-top: 0;
-    z-index: 9;
+	top: 100%;
+	left: 0;
+	display: flex;
+	border: 4px solid #f4f4f4;
+	border-top: 0;
+	z-index: 9;
 }
 
 @media screen and (max-width: 768px) {
-    .custom-logo-link > .custom-logo {
-        width: 150px;
-        height: 30px;
-    }
+	.custom-logo-link > .custom-logo {
+		width: 150px;
+		height: 30px;
+	}
 }
 
 .pointer {
-    cursor: pointer !important;
+	cursor: pointer !important;
 }
 
 /* Hide HTML5 Up and Down arrows. */
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
-    width: 60px;
+	-moz-appearance: textfield;
+	width: 60px;
+}
+
+.variation-SoldBy {
+	display: none !important;
 }

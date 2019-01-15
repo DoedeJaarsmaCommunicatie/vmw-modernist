@@ -212,7 +212,7 @@ function the_big_shopping_cart()
 	    if( $missing_amount > 0) {
 	        ?>
             <i class="fas fa-exclamation-triangle text-warning" aria-hidden="true"></i>
-            Bestel voor nog <span class="text-primary">&euro; <?=$missing_amount?></span>
+            Bestel voor nog <span class="text-primary">&euro; <?= str_replace( '.', ',', money_format('%.2n', $missing_amount) )?></span>
             bij <a href="<?=$sold_by['link']?>" title="<?=$sold_by['name']?>"><?=$sold_by['name']?></a>
             voor gratis verzending!
             <?php
