@@ -1,1 +1,10 @@
-.note-text{font-size:1rem!important}.remove-filter:after,.remove-filter:before{width:100%!important;height:2px!important}
+.note-text {
+	font-size: 1rem !important;
+	font-weight: 400;
+	margin-left: 8px;
+}
+.remove-filter:after,
+.remove-filter:before {
+	width: 100% !important;
+	height: 2px !important;
+}
