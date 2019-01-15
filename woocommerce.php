@@ -35,6 +35,8 @@ if ( is_singular( 'product' ) ) {
 	$related_ids                 =  wc_get_related_products( $context['product']->get_id(), $related_limit );
 	$context['related_products'] =  Timber::get_posts( $related_ids );
 	
+	$context['category']    = new Timber\Term( get_the_terms( $context['post']->ID, 'product_cat' )[0]->term_id );
+	
 	if( count( $context[ 'related_products' ] ) < $related_limit )
 	{
 	

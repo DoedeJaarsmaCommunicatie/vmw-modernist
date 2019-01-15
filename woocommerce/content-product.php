@@ -12,7 +12,6 @@ if( class_exists( 'Timber' ) ) {
 	$context['post']        = Timber::get_post($GLOBALS['post']->ID);
 	$product                = wc_get_product( $context['post']->ID );
 	$context['product']     = $product;
-	
 
 	if( is_front_page() ) {
 		Timber::render('templates/woocommerce/partials/tease-product.twig', $context);
