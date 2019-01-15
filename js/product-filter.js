@@ -1,5 +1,5 @@
 (function($) {
-	$(document).ready(function() {
+	document.addEventListener("DOMContentLoaded", function() {
 		$("#toggleFilter").on("click", function() {
 			document
 				.querySelector("#filterProducts")
