@@ -17,14 +17,17 @@ class PlusMinus {
 
         if( !input.getAttribute('data-event') ) {
             form.querySelector('.js-make-me-less').addEventListener('click', () => {
-                if( parseInt(input.value) <= 1) {
+                if( parseInt(input.value) <= input.step) {
                     return;
                 }
-                input.value--
+
+                // input.value = parseInt(input.value) - input.step;
+                input.stepDown()
             })
 
             form.querySelector('.js-make-me-more').addEventListener('click', () => {
-                input.value++
+                // input.value = parseInt(input.value) + input.step;
+                input.stepUp()
             })
 
             input.setAttribute('data-event', 'on')

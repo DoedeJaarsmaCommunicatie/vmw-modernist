@@ -130,14 +130,18 @@ function product_pa_list( $product_id, $return = true)
 
 function product_add_to_cart( $product_id, $return = true)
 {
+    $steps = absint( get_post_meta( $product_id, 'group_of_quantity', true ) );
     
     $button_minus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn bg-white js-make-me-less border-tertiary-light-20 border-right-0 btn-plusle-minum', $product_id, '-' );
     $button_plus = sprintf('<button type="%s" class="%s" data-target="%d">%s</button>', 'button', 'btn bg-white js-make-me-more border-tertiary-light-20 border-left-0 btn-plusle-minum', $product_id, '+' );
     $input_amount = sprintf('<input type="%7$s" step="%6$d" min="%5$d" value="%4$d" size="%3$d" pattern="[0-9]*" inputmode="numeric" name="%1$s" id="%1$s" class="%2$s">',
         'quantity',
     'text-center',
-    4, 1, 0, 1,
-    'numeric'
+    4,
+        ($steps > 0)? $steps : 1,
+        ($steps > 0)? $steps : 0,
+        ($steps > 0)? $steps : 1,
+    'number'
         );
     
     $input_hidden = sprintf('<input type="%1$s" %1$s class="%2$s" aria-hidden="true" value="%3$d" name="%4$s" id="%4$s">',

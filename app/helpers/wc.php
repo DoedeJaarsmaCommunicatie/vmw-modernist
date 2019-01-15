@@ -44,11 +44,17 @@ function the_wc_single_vendor( $product_id ) {
 }
 
 function the_wc_usp() {
-    ?>
+	$steps = absint( get_post_meta( get_queried_object_id(), 'group_of_quantity', true ) );
+	
+	?>
     <section class="vmw__single__product__usp">
         <ul class="p-0 m-2" style="list-style-type: circle; width: 200px;">
             <li>Gratis verzending > € 70,-</li>
+    <?php if($steps > 0): ?>
+            <li>Per <?=$steps?> flessen te bestellen</li>
+    <?php else : ?>
             <li>Per fles te bestellen</li>
+    <?php endif; ?>
             <li>Bestellen en betalen via vindmijnwijn.nl</li>
         </ul>
     </section>
