@@ -7,7 +7,7 @@
     function vmw_request() {
         let xhr = new XMLHttpRequest();
 
-        xhr.open('get', 'https://vindmijnwijn.nl/vmw_new_staging/wp-admin/admin-post.php?action=fetch_kiyoh')
+        xhr.open('get', 'https://vindmijnwijn.nl/wp-admin/admin-post.php?action=fetch_kiyoh')
 
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
