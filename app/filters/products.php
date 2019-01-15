@@ -137,7 +137,8 @@ function product_add_to_cart( $product_id, $return = true)
     $input_amount = sprintf('<input type="%7$s" step="%6$d" min="%5$d" value="%4$d" size="%3$d" pattern="[0-9]*" inputmode="numeric" name="%1$s" id="%1$s" class="%2$s">',
         'quantity',
     'text-center',
-    4, 1,
+    4,
+        ($steps > 0)? $steps : 1,
         ($steps > 0)? $steps : 0,
         ($steps > 0)? $steps : 1,
     'number'
