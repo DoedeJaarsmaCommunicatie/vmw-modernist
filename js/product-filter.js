@@ -1,7 +1,9 @@
 (function($) {
 	$(document).ready(function() {
 		$("#toggleFilter").on("click", function() {
-			$("#filterProducts").classList.toggle("active");
+			document
+				.querySelector("#filterProducts")
+				.classList.toggle("active");
 		});
 	});
 })(jQuery);
