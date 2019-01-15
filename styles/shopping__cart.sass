@@ -91,18 +91,19 @@
   //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--primary), endColorstr=var(--secondary),GradientType=0 ) !important
 
 .shop_table
-  .product-remove
-    width: 5%
-  .product-thumbnail
-    width: 10%
-  .product-name
-    width: 35%
-  .product-price
-    width: 15%
-  .product-quantity
-    width: 20%
-  .product-subtotal
-    width: 15%
+  +not_mobile
+    .product-remove
+      width: 5%
+    .product-thumbnail
+      width: 10%
+    .product-name
+      width: 35%
+    .product-price
+      width: 15%
+    .product-quantity
+      width: 20%
+    .product-subtotal
+      width: 15%
 
 //.shopping__cart__footer
 //  position: fixed
