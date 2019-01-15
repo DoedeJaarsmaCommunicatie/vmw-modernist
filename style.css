@@ -81,8 +81,8 @@ body {
 
 @media screen and (max-width: 768px) {
 	.custom-logo-link > .custom-logo {
-		width: 150px;
-		height: 30px;
+		width: 200px;
+		height: 40px;
 	}
 }
 
