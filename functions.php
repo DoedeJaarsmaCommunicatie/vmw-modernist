@@ -73,6 +73,7 @@ function vmw_scripts() {
 	wp_enqueue_script( 'plus_minus_functions', get_stylesheet_directory_uri() . '/js/plus-minus.js', [], 201812, true );
 	wp_enqueue_script( 'search_form_autofiller_cdn', 'https://cdn.jsdelivr.net/gh/TarekRaafat/autoComplete.js@3.2.2/dist/js/autoComplete.min.js', [  ],201901, true);
 	wp_enqueue_script( 'search_form_autofiller', get_stylesheet_directory_uri() . '/js/search_form.webpack.js', [ ],201901, true);
+	wp_enqueue_script( 'form_navi_mobi', get_stylesheet_directory_uri() . '/js/product-filter.js', [ 'jQuery' ],201901, true);
 	
 	if( is_front_page() ) {
 		wp_enqueue_script( 'vue', get_stylesheet_directory_uri() . '/vue/vue.webpack.js', [], 201901, true );

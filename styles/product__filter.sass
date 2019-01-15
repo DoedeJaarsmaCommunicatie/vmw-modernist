@@ -1,3 +1,4 @@
+@import "helpers/all"
 .note-text
   font-size: 1rem !important
   font-weight: 400
@@ -7,3 +8,9 @@
   &::before, &::after
     width: 100% !important
     height: 2px !important
+
+#filterProducts
+  +mobile_only
+    display: none
+    &.active
+      display: block
