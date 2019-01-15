@@ -1,1 +1,47 @@
-.woocommerce-input-field-template{height:40px;border:1px solid rgba(51,51,51,.5);padding-left:15px;border-radius:5px!important}.transit{transition:all .3s}#wizard-p-0{display:grid;grid-template-columns:50% 50%}#wizard-p-0 .woocommerce-additional-fields{display:none}#wizard-p-0 .form-row{width:100%;display:block}#wizard-p-0 #ship-to-different-address-checkbox{position:static;margin-left:0}#wizard-p-0 #ship-to-different-address{cursor:pointer}.woocommerce-shipping-totals p.woocommerce-shipping-destination{display:none}#wizard .actions a{border-radius:5px!important}
+.woocommerce-input-field-template {
+  height: 40px;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  padding-left: 15px;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+
+.transit {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#wizard-p-0 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#wizard-p-0 .woocommerce-additional-fields {
+  display: none;
+}
+#wizard-p-0 .form-row {
+  width: 100%;
+  display: block;
+}
+#wizard-p-0 #ship-to-different-address-checkbox {
+  position: initial;
+  margin-left: initial;
+}
+#wizard-p-0 #ship-to-different-address {
+  cursor: pointer;
+}
+
+.woocommerce-shipping-totals p.woocommerce-shipping-destination {
+  display: none;
+}
+
+#wizard .actions a {
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+
+/*# sourceMappingURL=checkout__form.css.map */
