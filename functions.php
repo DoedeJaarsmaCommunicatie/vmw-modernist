@@ -1,10 +1,7 @@
 <?php
 /**
  * FIXME: Bestellen boven bedrag => bedrag dynamisch maken.
- * FIXME: Add to cart AJAX
  * FIXME: Harde strings vertaalbaar of aanpasbaar maken.
- * FIXME: Winkelmand pagina Twiggen.
- * FIXME:
  * @package filters
  */
 
@@ -75,7 +72,7 @@ function vmw_scripts() {
 	wp_enqueue_script( 'search_form_autofiller', get_stylesheet_directory_uri() . '/js/search_form.webpack.js', [ ],201901, true);
 	wp_enqueue_script( 'form_navi_mobi', get_stylesheet_directory_uri() . '/js/product-filter.js', [  ],201901, true);
 	
-	if( is_front_page() ) {
+	if( is_front_page() || is_404() ) {
 		wp_enqueue_script( 'vue', get_stylesheet_directory_uri() . '/vue/vue.webpack.js', [], 201901, true );
 	}
 	
