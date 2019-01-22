@@ -96,7 +96,9 @@
                 if ( land !== '*') {
                     params.append('product-land', land)
                 }
-                params.append('product-price', prijs)
+                if( prijs !== '' ) {
+					params.append('product-price', prijs)
+                }
 
                 let pUrl = `${this.url}?${params.toString()}`
                 window.location.href = pUrl
