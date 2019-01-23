@@ -24,6 +24,7 @@ array_map(
 		'helpers/elementor',
 		'helpers/wc_ajax',
 		'helpers/class-vmw-kiyoh-fetcher',
+		'helpers/class-vmw-api-endpoint-admin',
 
 		'filters/products',
 		'filters/wc',
