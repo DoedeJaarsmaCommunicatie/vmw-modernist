@@ -1,1 +1,8 @@
-.vmw__vendor__content{text-align:center}.vmw__vendor__content .vmw__vendor__image{max-height:150px;width:auto}
+.vmw__vendor__content {
+	text-align: center;
+}
+
+.vmw__vendor__content .vmw__vendor__image {
+	max-height: 150px;
+	width: auto;
+}
