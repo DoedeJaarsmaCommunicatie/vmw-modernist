@@ -4,38 +4,30 @@
 	padding-left: 15px;
 	border-radius: 5px !important;
 }
-
 .transit {
 	transition: all 0.3s;
 }
-
 #wizard-p-0 {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
-
 #wizard-p-0 .woocommerce-additional-fields {
 	display: none;
 }
-
 #wizard-p-0 .form-row {
 	width: 100%;
 	display: block;
 }
-
 #wizard-p-0 #ship-to-different-address-checkbox {
-	position: initial;
-	margin-left: initial;
+	position: static;
+	margin-left: 0;
 }
-
 #wizard-p-0 #ship-to-different-address {
 	cursor: pointer;
 }
-
 .woocommerce-shipping-totals p.woocommerce-shipping-destination {
 	display: none;
 }
-
 #wizard .actions a {
 	border-radius: 5px !important;
 }
