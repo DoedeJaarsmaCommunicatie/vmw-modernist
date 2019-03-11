@@ -3,15 +3,13 @@
 {% block content %}
 
     {% do action('woocommerce_before_single_product') %}
-    <article itemscope itemtype="http://schema.org/Product" class="single-product-details vmw__single__product container pt-3 {{ post.class }}">
-        <meta itemprop="url" content="{{ post.link }}" />
-        <meta itemprop="category" content="{{ product.category }}">
-        <meta itemprop="sku" content="{{ product.SKU }}">
+    <article class="single-product-details vmw__single__product container pt-3 {{ post.class }}">
+
 
         <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
-                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="vmw__single__product__image" itemprop="image" />
+                <img src="{{ post.thumbnail.src('shop_single') }}" alt="{{ post.title }} | {{ product.get_attribute('pa_land') }} | gemaakt van de druif: {{ product.get_attribute('pa_druif') }}" class="vmw__single__product__image" />
             </figure>
             {% do action('vmw_after_single_product_image') %}
         </aside>
@@ -48,9 +46,31 @@
             {% include ["templates/woocommerce/partials/tease-vendor.twig"] %}
         </section>
 
+        <!-- Meta items for google -->
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org", "@type": "Offer", "@id": "{{ post.link }}", "price": "{{ product.price }}", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"
+                "@context": "https://schema.org/",
+                "@id": "{{ product.get_id }}",
+                "@type": "Product",
+                "name": "{{ product.get_name }}",
+                "image": "{{ post.thumbnail.src('shop_single') }}",
+                "description": "{{ post.content|striptags }}",
+                "sku": "IT-{{ product.get_id }}",
+                "offers": [{
+                    "@type": "Offer",
+                    "price": "{{ product.get_price }}",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock",
+                    "url": "{{ post.link }}",
+                    "priceValidUntil": "2020",
+                    "seller": {
+                        "@type": "Organization",
+                        "name": "Vindmijnwijn.nl - Bestel makkelijk online bij meerdere winkels.",
+                        "url": "{{ site.link }}",
+                        "description": "{{ site.title }} is de plek om online wijnen te bestellen bij meerdere winkels."
+                    }
+                }],
+                "itemCondition": "new"
             }
         </script>
     </article>
