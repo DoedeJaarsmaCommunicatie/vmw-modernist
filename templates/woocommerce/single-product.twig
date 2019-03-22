@@ -70,7 +70,8 @@
                         "description": "{{ site.title }} is de plek om online wijnen te bestellen bij meerdere winkels."
                     }
                 }],
-                "itemCondition": "new"
+                "itemCondition": "new",
+                "brand": "{{ product.get_attribute('domein') }}"
             }
         </script>
     </article>
