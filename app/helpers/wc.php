@@ -35,7 +35,7 @@ function the_wc_single_stock( $product_id ) {
 	<?php
     else: ?>
         <section class="vmw__single__product__shipping mt-lg-1">
-            <i class="fas fa-check-circle text-warning mt-1"></i> <span><strong class="text-warning">Tijdelijk niet beschikbaar</strong></span>
+            <i class="fas fa-question-circle text-warning mt-1"></i> <span><strong class="text-warning">Tijdelijk niet beschikbaar</strong></span>
         </section>
     <?php
 	endif;
