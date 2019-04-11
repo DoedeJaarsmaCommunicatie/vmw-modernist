@@ -41,3 +41,23 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-options',
 	));
 }
+
+/**
+ * Add custom sorting options (asc/desc)
+ */
+add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_woocommerce_get_catalog_ordering_args' );
+function custom_woocommerce_get_catalog_ordering_args( $args ) {
+	$orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+	if ( 'hamersma' == $orderby_value ) {
+		$args['order'] = 'ASC';
+		$args['meta_key'] = 'pa_hamersma';
+		$args['orderby'] = 'meta_value';
+	}
+	return $args;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
+function custom_woocommerce_catalog_orderby( $sortby ) {
+	$sortby['hamersma'] = 'Hamersma Score';
+	return $sortby;
+}
