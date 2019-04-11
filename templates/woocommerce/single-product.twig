@@ -55,7 +55,7 @@
                 "name": "{{ product.get_name }}",
                 "image": "{{ post.thumbnail.src('shop_single') }}",
                 "description": "{{ post.content|striptags }}",
-                "sku": "IT-{{ product.get_id }}",
+                "sku": "{{ product.get_id }}",
                 "offers": [{
                     "@type": "Offer",
                     "price": "{{ product.get_price }}",
