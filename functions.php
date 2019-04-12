@@ -113,3 +113,60 @@ add_action('wp', 'set_user_visited_product_cookie');
 //add_action( 'init', function () {
 //	add_rewrite_tag( '%pa_land%', '([^&]+)');
 //}, 10, 0);
+
+/**
+ * Save product attributes to post metadata when a product is saved.
+ *
+ * @param int $post_id The post ID.
+ * @param post $post The post object.
+ * @param bool $update Whether this is an existing post being updated or not.
+ *
+ * Refrence: https://codex.wordpress.org/Plugin_API/Action_Reference/save_post
+ */
+function wh_save_product_custom_meta($post_id, $post, $update) {
+	$post_type = get_post_type($post_id);
+	// If this isn't a 'product' post, don't update it.
+	if ($post_type != 'product')
+		return;
+	
+	if (!empty($_POST['attribute_names']) && !empty($_POST['attribute_values'])) {
+		$attribute_names = $_POST['attribute_names'];
+		$attribute_values = $_POST['attribute_values'];
+		foreach ($attribute_names as $key => $attribute_name) {
+			switch ($attribute_name) {
+				//for color (string)
+				case 'pa_hamersma':
+					//it may have multiple color (eg. black, brown, maroon, white) but we'll take only the first color.
+					if (!empty($attribute_values[$key][0])) {
+						update_post_meta($post_id, 'pa_hamersma', $attribute_values[$key][0]);
+					}
+					break;
+				default:
+					break;
+			}
+		}
+	}
+}
+
+add_action( 'save_post', 'wh_save_product_custom_meta', 10, 3);
+
+
+/**
+ * Add custom sorting options (asc/desc)
+ */
+add_filter( 'woocommerce_get_catalog_ordering_args', function ( $args ) {
+	$orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+	if ( 'hamersma' == $orderby_value ) {
+		$args['order'] = 'DESC';
+		$args['meta_key'] = 'pa_hamersma';
+		$args['orderby'] = 'meta_value';
+	}
+	return $args;
+} );
+
+add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
+function custom_woocommerce_catalog_orderby( $sortby ) {
+	$sortby['hamersma'] = 'Hamersma Score';
+	return $sortby;
+}
