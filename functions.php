@@ -159,7 +159,7 @@ add_filter( 'woocommerce_get_catalog_ordering_args', function ( $args ) {
 	if ( 'hamersma' == $orderby_value ) {
 		$args['order'] = 'DESC';
 		$args['meta_key'] = 'pa_hamersma';
-		$args['orderby'] = 'meta_value';
+		$args['orderby'] = 'meta_value_num';
 	}
 	return $args;
 } );
