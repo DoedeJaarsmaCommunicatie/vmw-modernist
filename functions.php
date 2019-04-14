@@ -160,6 +160,7 @@ add_filter( 'woocommerce_get_catalog_ordering_args', function ( $args ) {
 		$args['order'] = 'DESC';
 		$args['meta_key'] = 'pa_hamersma';
 		$args['orderby'] = 'meta_value_num';
+		$args['meta_type'] = 'NUMERIC';
 	}
 	return $args;
 } );
