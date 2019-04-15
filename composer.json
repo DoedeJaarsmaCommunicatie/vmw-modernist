@@ -1,6 +1,5 @@
 {
 	"require": {
-		"jketelaar/php-kiyoh-api": "^1.0",
-		"htmlburger/carbon-fields": "^3.1"
+		"jketelaar/php-kiyoh-api": "^1.0"
 	}
 }

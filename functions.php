@@ -5,6 +5,8 @@
  * @package filters
  */
 
+include_once get_stylesheet_directory_uri() . '/vendor/autoload.php';
+
 add_theme_support('woocommerce');
 
 /**
@@ -158,7 +160,7 @@ add_filter( 'woocommerce_get_catalog_ordering_args', function ( $args ) {
 	$orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
 	if ( 'hamersma' == $orderby_value ) {
 		$args['order'] = 'DESC';
-		$args['meta_key'] = 'pa_hamersma';
+		$args['meta_key'] = 'hamersma_score';
 		$args['orderby'] = 'meta_value_num';
 		$args['meta_type'] = 'NUMERIC';
 	}
