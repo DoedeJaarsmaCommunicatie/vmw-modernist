@@ -24,7 +24,8 @@
 
   .vmw__single__product__order
     grid-area: aside
-    height: 420px
+    +not_mobile
+      height: 420px
 
     display: grid
     grid-template-areas: "a" "b" "c" "d"
