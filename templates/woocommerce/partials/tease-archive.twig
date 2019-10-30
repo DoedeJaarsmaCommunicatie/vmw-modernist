@@ -20,5 +20,6 @@
             &euro; {{ product.get_price| number_format(2, ',', '.') }}
         </p>
         {{ post.ID|apply_filters('product_form_add_to_cart') }}
+        {{ fn('the_wc_single_stock', product.get_id()) }}
     </aside>
 </article>

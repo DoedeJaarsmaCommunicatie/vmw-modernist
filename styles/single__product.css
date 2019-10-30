@@ -2,19 +2,11 @@
 	height: 40px;
 	border: 1px solid rgba(51, 51, 51, 0.5);
 	padding-left: 15px;
-	-webkit-border-radius: 5px !important;
-	-moz-border-radius: 5px !important;
 	border-radius: 5px !important;
 }
-
 .transit {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-
 .vmw__single__product {
 	display: grid;
 	grid-template-areas: "img main main aside" "section section section section" "cards cards cards cards";
@@ -59,19 +51,16 @@
 .vmw__single__product strong {
 	font-weight: 300 !important;
 }
-
 .vmw__single__product__shipping {
 	display: grid;
 	grid-template-columns: 10% 90%;
 }
-
 .vmw__single__product__usp {
 	display: grid;
 	grid-template-areas: "a q" "b r" "c s";
 	grid-template-columns: 20% 80%;
 	grid-row-gap: 0.4rem;
 }
-
 .vmw__single__product__vendor__container {
 	display: grid;
 	grid-template: ". section .";
@@ -91,18 +80,15 @@
 	grid-area: section;
 	overflow-y: hidden;
 }
-
 .vmw__single__product__foundit {
 	grid-area: random;
 }
 .vmw__single__product__foundit article {
 	padding: 0 !important;
 }
-
 .vmw__single__product__related {
 	grid-area: section;
 }
-
 .vmw__related__products__list {
 	display: grid;
 	grid-template-areas: "land land land jaar" "streek streek streek streek" "druif druif druif druif" "smaak smaak smaak smaak";
@@ -134,21 +120,15 @@
 	grid-area: smaak;
 	min-height: 3.1rem;
 }
-
 .icon__image__attributes {
 	width: 15px;
 	margin-right: 0.5rem;
 }
-
 .vmw__related__card__container {
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
 	border-radius: 0 !important;
 }
 .vmw__related__card__container.current {
 	z-index: 2;
-	-webkit-box-shadow: 0 0 8px 3px rgba(51, 51, 51, 0.1);
-	-moz-box-shadow: 0 0 8px 3px rgba(51, 51, 51, 0.1);
 	box-shadow: 0 0 8px 3px rgba(51, 51, 51, 0.1);
 }
 @media screen and (max-width: 414px) {
@@ -156,54 +136,44 @@
 		display: none;
 	}
 }
-
 .vmw__related__card_title {
 	position: relative;
 	height: 2.5rem;
 	overflow-y: hidden;
 }
-.vmw__related__card_title::after {
+.vmw__related__card_title:after {
 	content: "";
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	height: 1px;
 	background: var(--primary);
 	width: 150px;
 }
-
 .vmw__single__product__header__title {
 	font-weight: 300;
 }
-
 .vmw__related__image {
 	max-height: 250px;
 }
-
 .vmw__single__product__price {
 	font-size: 2rem;
 }
-
 .vmw__single__product__order .vmw__single__product__vendor__logo {
 	max-height: 150px;
 	display: block;
 }
-
 .btn-order {
 	width: 100%;
 }
-
 .vmw__single__related__card {
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
 	border-radius: 0 !important;
 }
-
 .alternatives_background {
 	background-position-y: 2.5rem;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
 	background-size: cover;
 	padding-bottom: 5rem;
 	overflow: hidden;
@@ -213,5 +183,3 @@
 		background-image: none !important;
 	}
 }
-
-/*# sourceMappingURL=single__product.css.map */

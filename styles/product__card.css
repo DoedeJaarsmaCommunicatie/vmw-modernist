@@ -66,6 +66,11 @@
 	grid-area: aside;
 	font-size: 2rem;
 }
+.product__horizontal__card
+	.product__horizontal__buy
+	.vmw__single__product__shipping {
+	font-size: 1rem;
+}
 @media screen and (max-width: 414px) {
 	.product__horizontal__card
 		.product__horizontal__buy
