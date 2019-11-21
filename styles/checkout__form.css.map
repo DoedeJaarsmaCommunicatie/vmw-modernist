@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":["helpers/_templates.sass","helpers/_functions.sass","checkout__form.sass"],"names":[],"mappings":"AACA;EACE;EACA;EACA;ECaA;EACA;EACA;;;ADZF;EACE;EACA;EACA;EACA;EACA;;;AEVF;EACE;EACA;;AAEA;EACE;;AAEF;EACE;EACA;;AAEF;EACE;EACA;;AAEF;EACE;;;AAMA;EDPF;EACA;EACA","file":"checkout__form.css"}
-=======
-{"version":3,"sourceRoot":"","sources":["helpers/_templates.sass","helpers/_functions.sass","checkout__form.sass"],"names":[],"mappings":"AACA;EACE;EACA;EACA;ECaA;EACA;EACA;;;ADZF;EACE;EACA;EACA;EACA;EACA;;;AEVF;EACE;EACA;;AAEA;EACE;;AAEF;EACE;EACA;;AAEF;EACE;EACA;;AAEF;EACE;;;AAIF;EACE;;;AAKA;EDXF;EACA;EACA","file":"checkout__form.css"}
->>>>>>> origin/development
+{
+"version": 3,
+"mappings": "AACA,iCAAiC;EAC/B,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,+BAA4B;EACpC,YAAY,EAAE,IAAI;ECalB,qBAAqB,EAAE,cAAc;EACrC,kBAAkB,EAAE,cAAc;EAClC,aAAa,EAAE,cAAc;;ADZ/B,QAAQ;EACN,kBAAkB,EAAE,QAAQ;EAC5B,eAAe,EAAE,QAAQ;EACzB,cAAc,EAAE,QAAQ;EACxB,aAAa,EAAE,QAAQ;EACvB,UAAU,EAAE,QAAQ;;AEVtB,WAAW;EACT,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;ECH9B,oCAAoC;IDCtC,WAAW;MAKP,qBAAqB,EAAE,IAAI;EAE7B,0CAA8B;IAC5B,OAAO,EAAE,IAAI;EAEf,qBAAS;IACP,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,KAAK;EAEhB,+CAAmC;IACjC,QAAQ,EAAE,OAAO;IACjB,WAAW,EAAE,OAAO;EAEtB,sCAA0B;IACxB,MAAM,EAAE,OAAO;;AAGjB,+DAAkC;EAChC,OAAO,EAAE,IAAI;;AAIb,kBAAC;EDZH,qBAAqB,EAAE,cAAc;EACrC,kBAAkB,EAAE,cAAc;EAClC,aAAa,EAAE,cAAc",
+"sources": ["helpers/_templates.sass","helpers/_functions.sass","checkout__form.sass","helpers/_breakpoints.sass"],
+"names": [],
+"file": "checkout__form.css"
+}
