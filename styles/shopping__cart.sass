@@ -105,12 +105,13 @@
     .product-subtotal
       width: 15%
 
-//.shopping__cart__footer
-//  position: fixed
-//  bottom: 0
-//  background: var(--white)
-//  width: 100%
-//  padding-top: 1rem
+.shopping__cart__footer
+  +mobile_only
+    display: flex
+    flex-wrap: wrap
+  .continue-btn
+    flex: 1 1 auto
+
 
 .vmw__shopping__cart__item
   margin-bottom: 3rem

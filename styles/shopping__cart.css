@@ -121,6 +121,15 @@
 		width: 15%;
 	}
 }
+@media screen and (max-width: 414px) {
+	.shopping__cart__footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.shopping__cart__footer .continue-btn {
+	flex: 1 1 auto;
+}
 .vmw__shopping__cart__item {
 	margin-bottom: 3rem;
 }

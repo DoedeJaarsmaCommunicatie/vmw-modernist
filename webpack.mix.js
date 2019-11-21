@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,16 +11,16 @@ let mix = require('laravel-mix');
  |
  */
 
-mix
-    .js('vue/app.js', 'vue/vue.webpack.js')
-    .js('js/search_form.js', 'js/search_form.webpack.js')
+mix.js("vue/app.js", "vue/vue.webpack.js").js(
+	"js/search_form.js",
+	"js/search_form.webpack.js"
+);
 
-mix
-    .sass('styles/checkout__form.sass', 'styles/checkout__form.css')
-    .sass('styles/general.sass', 'styles/general.css')
-    .sass('styles/product__card.sass', 'styles/product__card.css')
-    .sass('styles/product__filter.sass', 'styles/product__filter.css')
-    .sass('styles/related__card.sass', 'styles/related__card.css')
-    .sass('styles/shopping__cart.sass', 'styles/shopping__cart.css')
-    .sass('styles/single__product.sass', 'styles/single__product.css')
-    .sass('styles/vendor__card.sass', 'styles/vendor__card.css')
+mix.sass("styles/checkout__form.sass", "styles/checkout__form.css")
+	.sass("styles/general.sass", "styles/general.css")
+	.sass("styles/product__card.sass", "styles/product__card.css")
+	.sass("styles/product__filter.sass", "styles/product__filter.css")
+	.sass("styles/related__card.sass", "styles/related__card.css")
+	.sass("styles/shopping__cart.sass", "styles/shopping__cart.css")
+	.sass("styles/single__product.sass", "styles/single__product.css")
+	.sass("styles/vendor__card.sass", "styles/vendor__card.css");

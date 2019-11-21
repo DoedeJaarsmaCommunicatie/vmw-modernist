@@ -2,7 +2,6 @@
 
 .vmw__single__product
   display: grid
-  //grid-template-areas: "header header header header" "img main main aside" "section section section section" "reviews reviews cards cards" "random random random random"
   grid-template-areas: "img main main aside" "section section section section" "cards cards cards cards"
   grid-template-columns: 20% 1fr 1fr 25%
   grid-column-gap: 40px
@@ -11,7 +10,7 @@
     grid-template-areas: "header header header header" "img img aside aside" "main main main main" "section section section section" "reviews reviews reviews reviews" "cards cards cards cards" "random random random random"
 
   +mobile_only
-    grid-template-areas: "header header header header" "img img img img" "aside aside aside aside" "main main main main" "section section section section" "reviews reviews reviews reviews" "cards cards cards cards" "random random random random"
+    grid-template-areas: "header header header header" "img img aside aside" "main main main main" "section section section section" "reviews reviews reviews reviews" "cards cards cards cards" "random random random random"
 
   .vmw__single__product__header
     grid-area: header
@@ -48,6 +47,11 @@
   grid-template-areas: "a q" "b r" "c s"
   grid-template-columns: 20% 80%
   grid-row-gap: 0.4rem
+  +above_tablet
+    ul
+      width: 200px
+  +mobile_only
+    display: block
 
 .vmw__single__product__vendor__container
   display: grid

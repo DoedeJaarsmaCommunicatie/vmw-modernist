@@ -63,7 +63,7 @@ function the_wc_usp()
     
     ?>
     <section class="vmw__single__product__usp">
-        <ul class="p-0 m-2" style="list-style-type: circle; width: 200px;">
+        <ul class="p-0 m-2" style="list-style-type: circle;">
             <li>Gratis verzending > € 70,-</li>
     <?php if ($steps > 0) : ?>
             <li>Per <?=$steps?> flessen te bestellen</li>
@@ -244,7 +244,8 @@ function the_big_shopping_cart()
     }?>
         <footer class="shopping__cart__footer">
             <a class="btn bg-tertiary text-white p-2" href="<?=get_permalink(wc_get_page_id('cart'));?>">Winkelwagen bekijken</a>
-            <a class="btn bg-success text-white p-2" href="<?=get_permalink(wc_get_page_id('checkout'));?>">Direct afrekenen</a>
+            <a class="btn bg-success text-white p-2 ml-auto" href="<?=get_permalink(wc_get_page_id('checkout'));?>">Direct afrekenen</a>
+            <a class="btn bg-transparent text-success border-success d-block p-2 mt-2 mt-sm-0 d-sm-inline-block continue-btn" href=".">Verder winkelen</a>
         </footer>
     </section>
     <?php

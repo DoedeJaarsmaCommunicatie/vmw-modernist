@@ -151,9 +151,9 @@ function product_add_to_cart( $product_id, $return = true)
     'product_id'
     );
     
-    $submit_button = sprintf( '<input type="%1$s" class="%2$s" value="%3$s" style="width: 95px;" />',
+    $submit_button = sprintf( '<input type="%1$s" class="%2$s" value="%3$s" />',
     'submit',
-    'btn bg-success text-uppercase text-white btn-lg ml-md-2 btn-order border-0 mt-1 mt-sm-0',
+    'btn bg-success text-uppercase text-white btn-lg btn-order border-0 mt-1',
     'Bestel'
     );
     
