@@ -193,8 +193,11 @@
 		background-image: none !important;
 	}
 }
+.vmw__single__product__usp__mobile {
+	display: none;
+}
 @media screen and (max-width: 414px) {
 	.vmw__single__product__usp__mobile {
-		display: none;
+		display: block;
 	}
 }

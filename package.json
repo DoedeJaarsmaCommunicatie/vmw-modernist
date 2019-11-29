@@ -6,18 +6,18 @@
 	"author": "Mitch Hijlkema <mitchhijlkema@hotmail.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"cross-env": "^5.2.0",
-		"husky": "^1.3.1",
-		"laravel-mix": "^4.0.13",
-		"lint-staged": "^8.1.0",
-		"prettier": "^1.15.3",
-		"resolve-url-loader": "2.3.1",
-		"sass": "^1.15.3",
-		"sass-loader": "7.*",
-		"vue-template-compiler": "^2.5.21"
+		"cross-env": "^6.0.3",
+		"husky": "^3.1.0",
+		"laravel-mix": "^5.0.0",
+		"lint-staged": "^9.5.0",
+		"prettier": "^1.19.1",
+		"resolve-url-loader": "^3.1.1",
+		"sass": "^1.23.7",
+		"sass-loader": "^8.0.0",
+		"vue-template-compiler": "^2.6.10"
 	},
 	"dependencies": {
-		"vue": "^2.5.21"
+		"vue": "^2.6.10"
 	},
 	"scripts": {
 		"dev": "npm run development",
