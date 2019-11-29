@@ -13,7 +13,7 @@
     {{ product.get_id|apply_filters('product_form_add_to_cart') }}
     {{ fn('the_wc_single_stock', product.get_id()) }}
     {{ fn('the_wc_usp') }}
-    <p class="d-block">
+    <p class="d-none d-sm-block">
         Verkoop door:
         <a href="{{ fn('get_term_link', vendor.term_id) }}">
             <img src="{{ fn('wp_get_attachment_image_url', vendor_data.logo, 'medium' )}}" alt="{{ vendor.name}}" class="vmw__single__product__vendor__logo">
