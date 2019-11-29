@@ -4,8 +4,6 @@
 
     {% do action('woocommerce_before_single_product') %}
     <article class="single-product-details vmw__single__product container pt-3 {{ post.class }}">
-
-
         <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
@@ -15,7 +13,8 @@
         </aside>
         <main class="vmw__single__product__main">
             <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-                <h1 class="vmw__single__product__header__title mb-0 text-primary" id="single_product_title_{{ post.id }}" itemprop="name">
+                {{ fn('the_wc_mobile_usp') }}
+                <h1 class="vmw__single__product__header__title mb-0 text-black" id="single_product_title_{{ post.id }}" itemprop="name">
                     {{ post.title }}
                 </h1>
 

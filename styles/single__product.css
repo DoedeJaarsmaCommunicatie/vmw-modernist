@@ -68,7 +68,7 @@
 }
 @media screen and (max-width: 414px) {
 	.vmw__single__product__usp {
-		display: block;
+		display: none;
 	}
 }
 .vmw__single__product__vendor__container {
@@ -191,5 +191,10 @@
 @media screen and (max-width: 414px) {
 	.alternatives_background {
 		background-image: none !important;
+	}
+}
+@media screen and (max-width: 414px) {
+	.vmw__single__product__usp__mobile {
+		display: none;
 	}
 }

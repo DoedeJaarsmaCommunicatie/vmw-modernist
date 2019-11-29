@@ -76,6 +76,23 @@ function the_wc_usp()
     <?php
 }
 
+function the_wc_mobile_usp()
+{
+    $steps = (int) get_post_meta(get_queried_object_id(), 'group_of_quantity', true); ?>
+    <section class="vmw__single__product__usp__mobile">
+        <ul class="p-0 m-2" style="list-style-type: circle;">
+            <li>Gratis verzending > € 70,-</li>
+	        <?php if ($steps > 0) : ?>
+                <li>Per <?=$steps?> flessen te bestellen</li>
+	        <?php else : ?>
+                <li>Per fles te bestellen</li>
+	        <?php endif; ?>
+            <li>Bestellen en betalen via vindmijnwijn.nl</li>
+        </ul>
+    </section>
+    <?php
+}
+
 function the_big_shopping_cart()
 {
     $cart_totals            = wc()->cart->get_totals();
