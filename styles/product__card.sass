@@ -49,15 +49,17 @@
   .product__horizontal__buy
     grid-area: aside
     font-size: 2rem
-    +mobile_only
-      .product__horizontal__add_to_cart
-        flex-wrap: wrap
-        #quantity
-          width: 32px
+
+    .vmw__single__product__shipping
+      font-size: 1rem
 
 .product__horizontal__add_to_cart
   display: flex
-  height: 45px
+  flex-wrap: wrap
+  #quantity
+    flex: 1 1 auto
+    -webkit-border-radius: 0
+    -webkit-appearance: none
 
   .btn-plusle-minum
     +border_radius
@@ -76,9 +78,6 @@
     border: 0
     border-bottom: 1px solid #a7a7a7
     border-top: 1px solid #a7a7a7
-
-  input[type="numeric"]
-    width: 50px
 
 .vmw__recently__visited__container
   display: grid

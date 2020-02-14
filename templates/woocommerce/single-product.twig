@@ -4,8 +4,6 @@
 
     {% do action('woocommerce_before_single_product') %}
     <article class="single-product-details vmw__single__product container pt-3 {{ post.class }}">
-
-
         <aside class="vmw__single__product__aside p-3">
             {% do action('vmw_before_single_product_image') %}
             <figure class="vmw__single__product__figure text-center">
@@ -15,7 +13,7 @@
         </aside>
         <main class="vmw__single__product__main">
             <header class="vmw__single__product__header" id="single_product_header_{{ post.id }}">
-                <h1 class="vmw__single__product__header__title mb-0 text-primary" id="single_product_title_{{ post.id }}" itemprop="name">
+                <h1 class="vmw__single__product__header__title mb-0 text-black" id="single_product_title_{{ post.id }}" itemprop="name">
                     {{ post.title }}
                 </h1>
 
@@ -32,7 +30,10 @@
         </main>
         {# This includes the right sidebar #}
         {% include ["templates/woocommerce/partials/single-sidebar.twig"] with { product: product } %}
-        <section class="vmw__single__product__related text-center " >
+        <section class="vmw__single__product__related text-center">
+            <div class="text-left">
+                {{ fn('the_wc_mobile_usp') }}
+            </div>
             <h4 class="my-3">{{ __('Alternatieven', 'vmw' ) }}</h4>
             <div class="row justify-content-center alternatives_background align-items-start" data-background="{{ fn('get_field', 'achtergrond_alternatieven', 'option')['url'] }}">
                 {% include "templates/woocommerce/partials/single-related.twig" with { current: post } %}
